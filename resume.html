@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Aaron</title>
+  <meta name="description" content="Aaron's resume — work experience, education, and skills.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/resume.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">Aaron</a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link is-active" aria-current="page">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link is-active" aria-current="page">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">Resume</p>
+      <h1>Experience &amp; skills</h1>
+      <p class="lead">Replace this with a short summary line, or remove it if the sections below speak for themselves.</p>
+    </section>
+
+    <div class="container resume-toolbar">
+      <!-- Swap href for a real PDF once you have one, e.g. files/aaron-resume.pdf -->
+      <a class="btn btn--secondary" href="#" download>Download PDF</a>
+    </div>
+
+    <section class="container resume-section">
+      <h2 class="resume-section__title">Work Experience</h2>
+
+      <div class="resume-entry">
+        <div class="resume-entry__header">
+          <div>
+            <span class="resume-entry__role">Job Title</span> ·
+            <span class="resume-entry__org">Company Name</span>
+          </div>
+          <span class="resume-entry__dates">Month Year – Present</span>
+        </div>
+        <ul class="resume-entry__list">
+          <li>Replace with a specific, results-oriented bullet about what you did and its impact.</li>
+          <li>Second bullet — quantify outcomes where you can (%, time saved, users, revenue).</li>
+          <li>Third bullet, optional — keep each entry to 2–4 bullets max.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry__header">
+          <div>
+            <span class="resume-entry__role">Job Title</span> ·
+            <span class="resume-entry__org">Previous Company</span>
+          </div>
+          <span class="resume-entry__dates">Month Year – Month Year</span>
+        </div>
+        <ul class="resume-entry__list">
+          <li>Replace with a specific, results-oriented bullet about what you did and its impact.</li>
+          <li>Second bullet — quantify outcomes where you can (%, time saved, users, revenue).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container resume-section">
+      <h2 class="resume-section__title">Education</h2>
+
+      <div class="resume-entry">
+        <div class="resume-entry__header">
+          <div>
+            <span class="resume-entry__role">Degree, Field of Study</span> ·
+            <span class="resume-entry__org">School Name</span>
+          </div>
+          <span class="resume-entry__dates">Year – Year</span>
+        </div>
+        <ul class="resume-entry__list">
+          <li>Optional: honors, relevant coursework, or activities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container resume-section">
+      <h2 class="resume-section__title">Skills</h2>
+      <div class="tag-list">
+        <span class="tag">Skill One</span>
+        <span class="tag">Skill Two</span>
+        <span class="tag">Skill Three</span>
+        <span class="tag">Skill Four</span>
+        <span class="tag">Skill Five</span>
+        <span class="tag">Skill Six</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

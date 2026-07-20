@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron — Portfolio</title>
+  <meta name="description" content="Portfolio of Aaron — selected projects, about, and resume.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">Aaron</a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Selected work</h1>
+      <p class="lead">A collection of projects I've built. Replace this line with a sentence or two about the kind of work you do and what you're looking for.</p>
+    </section>
+
+    <section class="container">
+      <div class="grid grid--cards">
+
+        <article class="card">
+          <div class="card__media">Project image</div>
+          <div class="card__body">
+            <h3 class="card__title">Project Title One</h3>
+            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">Project image</div>
+          <div class="card__body">
+            <h3 class="card__title">Project Title Two</h3>
+            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">Project image</div>
+          <div class="card__body">
+            <h3 class="card__title">Project Title Three</h3>
+            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">Project image</div>
+          <div class="card__body">
+            <h3 class="card__title">Project Title Four</h3>
+            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">Project image</div>
+          <div class="card__body">
+            <h3 class="card__title">Project Title Five</h3>
+            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">Project image</div>
+          <div class="card__body">
+            <h3 class="card__title">Project Title Six</h3>
+            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

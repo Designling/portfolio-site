@@ -1,0 +1,349 @@
+/* ==========================================================================
+   BASE / RESET
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+h1, h2, h3, h4, p { margin: 0; }
+
+button { font: inherit; cursor: pointer; }
+
+/* Consistent, visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+h1 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+}
+
+h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-tight);
+}
+
+.lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.eyebrow {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   LAYOUT / CONTAINER
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--container-padding-desktop);
+  }
+}
+
+section {
+  padding-block: var(--space-8);
+}
+
+/* ==========================================================================
+   SITE HEADER / NAVIGATION
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--nav-height);
+}
+
+.nav__brand {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-accent);
+}
+
+.nav__links {
+  display: none;
+  gap: var(--space-6);
+}
+
+.nav__link {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  padding-block: var(--space-2);
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+.nav__link.is-active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+}
+
+.nav__toggle-icon {
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  position: relative;
+}
+
+.nav__toggle-icon::before,
+.nav__toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.nav__toggle-icon::before { top: -6px; }
+.nav__toggle-icon::after { top: 6px; }
+
+.nav__mobile-panel {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-3) var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.nav__mobile-panel.is-open {
+  display: flex;
+}
+
+.nav__mobile-panel .nav__link {
+  padding: var(--space-3) var(--space-2);
+  border-bottom: none;
+  border-radius: var(--radius-sm);
+}
+
+.nav__mobile-panel .nav__link.is-active,
+.nav__mobile-panel .nav__link:hover {
+  background-color: var(--color-accent-muted);
+}
+
+@media (min-width: 768px) {
+  .nav__links { display: flex; }
+  .nav__toggle { display: none; }
+  .nav__mobile-panel { display: none !important; }
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: background-color var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-accent-muted);
+}
+
+/* ==========================================================================
+   CARDS (project cards, resume entry cards, etc.)
+   ========================================================================== */
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.card__media {
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-accent-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+}
+
+.card__body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card__title {
+  color: var(--color-accent);
+}
+
+.card__desc {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+/* ==========================================================================
+   GRID UTILITIES
+   ========================================================================== */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid--cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid--cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ==========================================================================
+   PAGE HERO (shared top-of-page intro block)
+   ========================================================================== */
+
+.hero {
+  padding-block: var(--space-7) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 640px;
+}
+
+/* ==========================================================================
+   SITE FOOTER
+   ========================================================================== */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-6);
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.site-footer p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.site-footer__links {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.site-footer__links a {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.site-footer__links a:hover {
+  color: var(--color-accent);
+}

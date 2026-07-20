@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Aaron</title>
+  <meta name="description" content="About Aaron — background, interests, and how to get in touch.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">Aaron</a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Portfolio</a>
+        <a href="about.html" class="nav__link is-active" aria-current="page">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link">Portfolio</a>
+      <a href="about.html" class="nav__link is-active" aria-current="page">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">About</p>
+      <h1>Hi, I'm Aaron</h1>
+      <p class="lead">Replace this with a one-line summary of who you are and what you do.</p>
+    </section>
+
+    <section class="container">
+      <div class="about-grid">
+        <div class="about-photo">
+          <!-- Swap for: <img src="images/profile.jpg" alt="Photo of Aaron"> -->
+          Profile photo
+        </div>
+
+        <div class="about-bio">
+          <p>
+            Replace this paragraph with your real bio: where you're from, what you've worked
+            on, and what drives you. Keep it to two or three short paragraphs — a portfolio
+            bio works best when it's easy to skim.
+          </p>
+          <p>
+            Use the second paragraph for specifics: the kind of problems you like solving,
+            tools or disciplines you specialize in, or a project you're proud of. This is
+            placeholder copy, so replace it with your own.
+          </p>
+
+          <dl class="about-facts">
+            <div class="about-fact">
+              <dt>Based in</dt>
+              <dd>City, State</dd>
+            </div>
+            <div class="about-fact">
+              <dt>Focus</dt>
+              <dd>Your focus area</dd>
+            </div>
+            <div class="about-fact">
+              <dt>Contact</dt>
+              <dd><a href="mailto:aebeling5@gmail.com">aebeling5@gmail.com</a></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

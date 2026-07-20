@@ -1,0 +1,94 @@
+/* Page-specific layout for resume.html. Uses tokens only. */
+
+.resume-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: var(--space-4) 0;
+}
+
+.resume-section {
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.resume-section:first-of-type {
+  border-top: none;
+}
+
+.resume-section__title {
+  margin-bottom: var(--space-5);
+}
+
+.resume-entry + .resume-entry {
+  margin-top: var(--space-6);
+}
+
+.resume-entry__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.resume-entry__role {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.resume-entry__org {
+  color: var(--color-accent);
+  font-weight: var(--font-medium);
+}
+
+.resume-entry__dates {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.resume-entry__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.resume-entry__list li {
+  position: relative;
+  padding-left: var(--space-4);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.resume-entry__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-accent-muted);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-sm);
+}
+
+@media print {
+  .site-header, .site-footer, .resume-toolbar { display: none; }
+  body { background: #fff; }
+}
