@@ -7,24 +7,23 @@
    ========================================================================== */
 
 :root {
-  /* ---- Color: core palette ---- */
-  --color-bg: #FCFDEA;          /* page background */
-  --color-surface: #FFFFFF;     /* card / panel background, sits above bg */
-  --color-accent: #1E4121;      /* primary brand green */
-  --color-accent-hover: #2C5930;/* lighter green for hover/active states */
-  --color-accent-muted: #E4E9D6;/* pale green tint for subtle fills/badges */
+  /* ---- Color: core palette (Terminal-muted: dark slate + muted teal) ---- */
+  --color-bg: #17222B;          /* page background — dark slate */
+  --color-surface: #1F2D37;     /* card / panel background, sits above bg */
+  --color-accent: #5AA7B2;      /* primary accent — muted teal */
+  --color-accent-hover: #74BAC4;/* lighter teal for hover/active states */
+  --color-accent-muted: #203038;/* dark teal tint for subtle fills/badges */
 
   /* ---- Color: text ---- */
-  --color-text-grey: #6E6E6E;   /* neutral dark grey; ~4.95:1 on --color-bg,
-                                   ~5.33:1 on --color-surface — passes WCAG AA
-                                   (4.5:1) for normal-size body text */
+  --color-text-grey: #D2DCE0;   /* light slate body text; ~11.6:1 on --color-bg,
+                                   ~10.1:1 on --color-surface — passes WCAG AA */
   --color-text: var(--color-text-grey); /* body copy */
-  --color-text-muted: #5A6B5C;  /* secondary text: dates, captions, labels */
-  --color-text-on-accent: #FFFFFF; /* text placed on top of --color-accent */
+  --color-text-muted: #8698A0;  /* secondary text: dates, captions, labels (~5.4:1) */
+  --color-text-on-accent: #0E1A20; /* dark text on top of --color-accent (~6.4:1) */
 
   /* ---- Color: structure ---- */
-  --color-border: #D9DEC4;      /* hairline borders / dividers */
-  --color-focus-ring: #1E4121;  /* keyboard focus outline */
+  --color-border: #2A3841;      /* hairline borders / dividers */
+  --color-focus-ring: #5AA7B2;  /* keyboard focus outline */
 
   /* ---- Typography: family ---- */
   --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',

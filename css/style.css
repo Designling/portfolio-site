@@ -98,8 +98,8 @@ section {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--color-accent);
-  border-bottom: 1px solid var(--color-accent-hover);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav {
@@ -115,7 +115,7 @@ section {
   gap: var(--space-2);
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
-  color: var(--color-text-on-accent);
+  color: var(--color-text);
 }
 
 .nav__logo {
@@ -132,20 +132,20 @@ section {
 .nav__link {
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  color: var(--color-text-on-accent);
+  color: var(--color-text);
   padding-block: var(--space-2);
   border-bottom: 2px solid transparent;
   transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .nav__link:hover {
-  color: var(--color-text-on-accent);
-  border-bottom-color: var(--color-text-on-accent);
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 .nav__link.is-active {
-  color: var(--color-text-on-accent);
-  border-bottom-color: var(--color-text-on-accent);
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 .nav__toggle {
@@ -155,9 +155,9 @@ section {
   width: 40px;
   height: 40px;
   background: none;
-  border: 1px solid var(--color-text-on-accent);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  color: var(--color-text-on-accent);
+  color: var(--color-text);
 }
 
 .nav__toggle-icon {
@@ -186,7 +186,7 @@ section {
   flex-direction: column;
   gap: var(--space-1);
   padding-block: var(--space-3) var(--space-5);
-  border-top: 1px solid var(--color-accent-hover);
+  border-top: 1px solid var(--color-border);
 }
 
 .nav__mobile-panel.is-open {
@@ -201,7 +201,8 @@ section {
 
 .nav__mobile-panel .nav__link.is-active,
 .nav__mobile-panel .nav__link:hover {
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-accent-muted);
+  color: var(--color-accent);
   border-bottom-color: transparent;
 }
 
@@ -295,9 +296,8 @@ a.card:focus-visible {
   object-fit: cover;
 }
 
-/* Brand-colored card media — a project logo on its own brand background. */
+/* Logo card media — a project logo padded on the theme's dark tint. */
 .card__media--unitely {
-  background-color: #19202E; /* Unite.ly brand navy */
   padding: var(--space-6);
 }
 
