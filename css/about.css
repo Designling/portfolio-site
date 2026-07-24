@@ -56,10 +56,6 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-@media (min-width: 640px) {
-  .about-facts { grid-template-columns: repeat(3, 1fr); }
-}
-
 .about-fact {
   padding: var(--space-4);
   background-color: var(--color-surface);
