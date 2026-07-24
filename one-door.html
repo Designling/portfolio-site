@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simplifying Entry — Aaron Ebeling</title>
+  <meta name="description" content="Simplifying Entry — removing the decision from Lore's front door for a 65+ user base.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/project.css?v=14">
+</head>
+<body>
+
+  <span id="top"></span>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="project-hero">
+        <a class="project-back" href="index.html">&larr; Back to portfolio</a>
+        <h1>Simplifying Entry</h1>
+        <div class="project-overview">
+          <p class="project-overview__summary">Removing the decision from Lore&rsquo;s front door for a 65+ user base.</p>
+          <div class="project-meta">
+            <div class="project-meta__item">
+              <span class="project-meta__label">Role</span>
+              <span class="project-meta__value">UX Designer</span>
+            </div>
+            <div class="project-meta__item">
+              <span class="project-meta__label">Timeline</span>
+              <span class="project-meta__value">One week</span>
+            </div>
+            <div class="project-meta__item">
+              <span class="project-meta__label">Tools</span>
+              <span class="project-meta__value">Lyssna, Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <h2 class="story__act">The Problem</h2>
+
+        <div class="beat">
+          <p>A new client brought us a 65+ population, and we started sending welcome emails to thousands of people who had never heard of us.</p>
+        </div>
+
+        <div class="beat">
+          <p>Those emails were personalized. Name, plan, the works.</p>
+        </div>
+
+        <div class="beat">
+          <p>To this audience, a company that knows your name is a company that already has your file. Users arrived at the front door certain they had an account and clicked Sign in.</p>
+        </div>
+
+        <div class="beat">
+          <p>They didn&rsquo;t have accounts. They hit a wall and called customer care.</p>
+        </div>
+
+        <div class="beat">
+          <p>These weren&rsquo;t ordinary support calls. Before an agent could help, they had to talk the caller out of a belief about their own history with us &mdash; a slow, uncomfortable conversation that happened before any actual support began.</p>
+        </div>
+
+        <div class="beat">
+          <p>We assumed the copy caused it and audited the marketing emails first. Nothing in them claimed an account existed. The belief wasn&rsquo;t something we said. It was something the email&rsquo;s existence implied.</p>
+        </div>
+
+        <h2 class="story__act">The Bet</h2>
+
+        <div class="beat">
+          <p>The screen offered three doors: Sign in, Learn more, Create account.</p>
+        </div>
+
+        <figure class="story-figure">
+          <div class="project-media">Image placeholder</div>
+          <figcaption>The old screen &mdash; three doors: Sign in, Learn more, Create account.</figcaption>
+        </figure>
+
+        <div class="beat">
+          <p>That asked every arriving user to correctly classify themselves before entering. But this population classified themselves wrong, confidently &mdash; and no amount of label-tuning fixes a confident wrong answer.</p>
+        </div>
+
+        <div class="beat">
+          <p>So we stopped asking.</p>
+        </div>
+
+        <div class="beat">
+          <p>One email field. One button: Continue to Lore.</p>
+          <ul>
+            <li>Email on file &rarr; sign-in</li>
+            <li>Email not on file &rarr; account creation</li>
+          </ul>
+        </div>
+
+        <figure class="story-figure">
+          <div class="project-media">Image placeholder</div>
+          <figcaption>The new screen &mdash; one email field, one button.</figcaption>
+        </figure>
+
+        <div class="beat">
+          <p>The system already knew which kind of user this was. No reason to make the user guess.</p>
+        </div>
+
+        <div class="beat">
+          <p><em>As a new or returning user, I need to get into Lore without having to make a decision about what I am.</em></p>
+        </div>
+
+        <h2 class="story__act">What It Cost Us</h2>
+
+        <div class="beat">
+          <p><strong>Typo risk.</strong> Fat-finger your address as a returning user and you land in account creation.</p>
+        </div>
+
+        <div class="beat">
+          <p>Autofill does most of the typing on that screen, so it&rsquo;s rarer in practice than on paper. And it fails into territory care already knows &mdash; they merge accounts routinely, since users move between clients. The worst case had a well-worn fix, not a dead end.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>An unfamiliar pattern for established users.</strong> Lore isn&rsquo;t an app people sign into constantly. The screen has to work best for the first time, not the fiftieth. Familiarity was the cheaper thing to trade.</p>
+        </div>
+
+        <h2 class="story__act">The Test</h2>
+
+        <div class="beat">
+          <p>A first-click test against the old screen. 30 participants, one day, $60.</p>
+        </div>
+
+        <div class="beat">
+          <p><em>Imagine you received an email and you just clicked a button that said &ldquo;I&rsquo;m ready to sign up.&rdquo; Then, this screen appeared. Where would you click first?</em></p>
+        </div>
+
+        <div class="beat">
+          <p>Old design: 4 participants clicked a target that wouldn&rsquo;t get them in. New design: 1.</p>
+        </div>
+
+        <div class="beat">
+          <p>Confidence came in slightly lower on the new screen. Only slightly, and it tracks &mdash; a single button that doesn&rsquo;t announce where it leads gives people less to confirm their choice against. Not enough to stop on.</p>
+        </div>
+
+        <div class="beat">
+          <p>At n=30 this was directional, not conclusive. It pointed the same way the call logs already did, which was enough to ship on.</p>
+        </div>
+
+        <h2 class="story__act">The Outcome</h2>
+
+        <div class="beat">
+          <p>Zero customer care calls about this issue across the next several months of new onboardings.</p>
+        </div>
+
+        <div class="beat">
+          <p>The category didn&rsquo;t shrink. It closed.</p>
+        </div>
+
+      </div>
+    </article>
+
+    <section class="container project-next">
+      <h2 class="project-next__heading">Up next</h2>
+      <div class="grid grid--cards">
+
+        <a class="card" href="unitely.html">
+          <div class="card__media card__media--unitely">
+            <img src="images/unitely-logo.png" alt="Unite.ly logo">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Unite.ly</h3>
+            <p class="card__desc">Increasing community engagement for Unite.ly &mdash; from a homepage redesign to rethinking how notifications work on mobile.</p>
+          </div>
+        </a>
+
+        <a class="card" href="rms.html">
+          <div class="card__media">
+            <img src="images/rms-thumbnail.svg" alt="RMS — a records/document icon with the RMS wordmark.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">RMS</h3>
+            <p class="card__desc">A records management system for long-term physical storage &mdash; creating warehouse space, designing a smarter waitlist, and fixing a painful decommission flow.</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="project-next__top">
+        <a href="#top" class="btn btn--secondary">Back to top &uarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/figures.js"></script>
+</body>
+</html>

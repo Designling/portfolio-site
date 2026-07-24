@@ -11,9 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css?v=10">
   <link rel="stylesheet" href="css/style.css?v=11">
-  <link rel="stylesheet" href="css/project.css?v=13">
+  <link rel="stylesheet" href="css/project.css?v=14">
 </head>
 <body>
+
+  <span id="top"></span>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
@@ -237,6 +239,36 @@
 
       </div>
     </article>
+
+    <section class="container project-next">
+      <h2 class="project-next__heading">Up next</h2>
+      <div class="grid grid--cards">
+
+        <a class="card" href="building-compliance.html">
+          <div class="card__media">
+            <img src="images/building-compliance-thumbnail.png" alt="A board of design-system card components on a teal background.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Building Compliance</h3>
+            <p class="card__desc">Consolidated a four-generations-deep design-system landscape into a single tokenized system &mdash; reaching 90%+ team-wide compliance in two months.</p>
+          </div>
+        </a>
+
+        <a class="card" href="one-door.html">
+          <div class="card__media">
+            <img src="images/simplifying-entry-thumbnail.png" alt="An illustration of a person opening a single arched door.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Simplifying Entry</h3>
+            <p class="card__desc">Removing the decision from Lore&rsquo;s front door for a 65+ user base &mdash; one email field, one button, zero support calls.</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="project-next__top">
+        <a href="#top" class="btn btn--secondary">Back to top &uarr;</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

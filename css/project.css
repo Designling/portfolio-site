@@ -429,3 +429,29 @@
   color: var(--color-text-muted);
   font-weight: var(--font-medium);
 }
+
+/* ==========================================================================
+   UP NEXT  (project-to-project navigation at the foot of each case study)
+   ========================================================================== */
+
+/* Smooth glide for the "back to top" link. */
+html { scroll-behavior: smooth; }
+
+.project-next {
+  border-top: 1px solid var(--color-border);
+}
+
+.project-next__heading {
+  margin-bottom: var(--space-5);
+}
+
+/* Two cards read best side-by-side rather than filling a 3-up grid. */
+@media (min-width: 1024px) {
+  .project-next .grid--cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Centered "back to top" button, used on every project page. */
+.project-next__top {
+  margin-top: var(--space-7);
+  text-align: center;
+}

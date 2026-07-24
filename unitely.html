@@ -11,9 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css?v=10">
   <link rel="stylesheet" href="css/style.css?v=11">
-  <link rel="stylesheet" href="css/project.css?v=13">
+  <link rel="stylesheet" href="css/project.css?v=14">
 </head>
 <body>
+
+  <span id="top"></span>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
@@ -176,11 +178,6 @@
           <p>Out of 50+ responses, 20 talked about their frustration with the notification system.</p>
         </div>
 
-        <figure class="story-figure">
-          <div class="project-media">Chart placeholder</div>
-          <figcaption>Survey results &mdash; of 50+ responses, 20 raised notification frustration. Send me the full breakdown and I&rsquo;ll rebuild this as a bar chart like the one above.</figcaption>
-        </figure>
-
         <div class="beat">
           <p>Unite.lys notification dot only went away when a user either clicked on the notification or when the user deleted the notification.</p>
         </div>
@@ -218,13 +215,38 @@
           <p>Although project funding was cut before the notification designs were implemented, users developers and stakeholders gained an appreciation of UX process.</p>
         </div>
 
-        <figure class="story-figure">
-          <img src="images/process.png" alt="A circular UX process diagram: research, build, launch, measure, and iterate.">
-          <figcaption>The UX process the team came to appreciate.</figcaption>
-        </figure>
-
       </div>
     </article>
+
+    <section class="container project-next">
+      <h2 class="project-next__heading">Up next</h2>
+      <div class="grid grid--cards">
+
+        <a class="card" href="rms.html">
+          <div class="card__media">
+            <img src="images/rms-thumbnail.svg" alt="RMS — a records/document icon with the RMS wordmark.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">RMS</h3>
+            <p class="card__desc">A records management system for long-term physical storage &mdash; creating warehouse space, designing a smarter waitlist, and fixing a painful decommission flow.</p>
+          </div>
+        </a>
+
+        <a class="card" href="building-compliance.html">
+          <div class="card__media">
+            <img src="images/building-compliance-thumbnail.png" alt="A board of design-system card components on a teal background.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Building Compliance</h3>
+            <p class="card__desc">Consolidated a four-generations-deep design-system landscape into a single tokenized system &mdash; reaching 90%+ team-wide compliance in two months.</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="project-next__top">
+        <a href="#top" class="btn btn--secondary">Back to top &uarr;</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

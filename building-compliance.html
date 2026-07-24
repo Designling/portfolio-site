@@ -11,9 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css?v=10">
   <link rel="stylesheet" href="css/style.css?v=11">
-  <link rel="stylesheet" href="css/project.css?v=13">
+  <link rel="stylesheet" href="css/project.css?v=14">
+  <style>
+    /* Framed panel for the inline SVG charts on this page. */
+    .chart-panel {
+      padding: var(--space-6);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+  </style>
 </head>
 <body>
+
+  <span id="top"></span>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
@@ -130,7 +141,18 @@
         </div>
 
         <figure class="story-figure">
-          <img src="images/compliance-rose.png" alt="Bar chart showing team compliance with the new tokenized system rising from one measure to the next.">
+          <div class="chart-panel">
+            <svg viewBox="0 0 620 340" role="img" aria-label="Bar chart: team compliance rising across five measures, then leveling off short of the goal line." style="width:100%;height:auto;display:block">
+              <!-- goal line -->
+              <line x1="50" y1="70" x2="590" y2="70" style="stroke:var(--color-text-muted)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.7"/>
+              <text x="586" y="60" text-anchor="end" style="fill:var(--color-text-muted)" font-size="16" font-family="Inter, sans-serif">Goal</text>
+              <!-- baseline -->
+              <line x1="45" y1="285" x2="590" y2="285" style="stroke:var(--color-border)" stroke-width="2"/>
+              <!-- bars: rising, second still short of the goal -->
+              <rect x="205" y="185" width="90" height="100" rx="6" style="fill:var(--color-accent)"/>
+              <rect x="345" y="105" width="90" height="180" rx="6" style="fill:var(--color-accent)"/>
+            </svg>
+          </div>
           <figcaption>Compliance climbing as the squad moved into the new system.</figcaption>
         </figure>
 
@@ -187,12 +209,57 @@
         </div>
 
         <figure class="story-figure">
-          <img src="images/payoff.png" alt="Line chart showing legacy-library usage trending down to near-zero over the three-week window.">
+          <div class="chart-panel">
+            <svg viewBox="0 0 620 340" role="img" aria-label="Line chart: legacy-library usage drops slowly at first, then falls off sharply about a third of the way through and flattens toward zero." style="width:100%;height:auto;display:block">
+              <!-- gridlines -->
+              <line x1="50" y1="90"  x2="590" y2="90"  style="stroke:var(--color-border)" stroke-width="1" opacity="0.5"/>
+              <line x1="50" y1="160" x2="590" y2="160" style="stroke:var(--color-border)" stroke-width="1" opacity="0.5"/>
+              <line x1="50" y1="230" x2="590" y2="230" style="stroke:var(--color-border)" stroke-width="1" opacity="0.5"/>
+              <!-- baseline -->
+              <line x1="50" y1="290" x2="590" y2="290" style="stroke:var(--color-border)" stroke-width="2"/>
+              <!-- area fill under the curve -->
+              <path d="M 50 62 C 130 74, 180 88, 235 100 C 285 114, 315 210, 350 244 C 400 274, 480 279, 590 280 L 590 290 L 50 290 Z" style="fill:var(--color-accent)" opacity="0.14"/>
+              <!-- curve: slow drop, sharp fall-off, asymptote -->
+              <path d="M 50 62 C 130 74, 180 88, 235 100 C 285 114, 315 210, 350 244 C 400 274, 480 279, 590 280" fill="none" style="stroke:var(--color-accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- emphasized endpoint near zero -->
+              <circle cx="590" cy="280" r="6" style="fill:var(--color-accent)"/>
+            </svg>
+          </div>
           <figcaption>Legacy-library usage trending down to near-zero over the three-week window.</figcaption>
         </figure>
 
       </div>
     </article>
+
+    <section class="container project-next">
+      <h2 class="project-next__heading">Up next</h2>
+      <div class="grid grid--cards">
+
+        <a class="card" href="one-door.html">
+          <div class="card__media">
+            <img src="images/simplifying-entry-thumbnail.png" alt="An illustration of a person opening a single arched door.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Simplifying Entry</h3>
+            <p class="card__desc">Removing the decision from Lore&rsquo;s front door for a 65+ user base &mdash; one email field, one button, zero support calls.</p>
+          </div>
+        </a>
+
+        <a class="card" href="unitely.html">
+          <div class="card__media card__media--unitely">
+            <img src="images/unitely-logo.png" alt="Unite.ly logo">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Unite.ly</h3>
+            <p class="card__desc">Increasing community engagement for Unite.ly &mdash; from a homepage redesign to rethinking how notifications work on mobile.</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="project-next__top">
+        <a href="#top" class="btn btn--secondary">Back to top &uarr;</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
