@@ -6,9 +6,74 @@
   padding-block: var(--space-4) 0;
 }
 
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* A vertical white "sheet" that floats on the cream page background and
+   holds the whole resume — hero, contact, and every section. */
+.resume-sheet {
+  max-width: 820px;
+  margin-block: var(--space-8);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 768px) {
+  .resume-sheet {
+    padding-inline: var(--space-7);
+  }
+}
+
+/* Inside the sheet, content fills the sheet's padded column rather than
+   applying its own container width/padding, so everything left-aligns. */
+.resume-sheet .container {
+  max-width: none;
+  padding-inline: 0;
+}
+
 .resume-section {
   padding-block: var(--space-7);
   border-top: 1px solid var(--color-border);
+}
+
+.resume-entry__org-desc {
+  margin-bottom: var(--space-3);
+  max-width: 70ch;
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* Company grouping: one company header + date, with one or more roles nested. */
+.resume-company + .resume-company {
+  margin-top: var(--space-6);
+}
+
+.resume-company__name {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  line-height: var(--leading-tight);
+}
+
+.resume-role {
+  margin-top: var(--space-5);
+}
+
+.resume-role__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
 }
 
 .resume-section:first-of-type {

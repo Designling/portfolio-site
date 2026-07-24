@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Depth — Aaron</title>
+  <meta name="description" content="Community Depth — redesigning posting and moderation for more reflective self-expression.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/project.css?v=2">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <a class="project-back" href="index.html">&larr; Back to portfolio</a>
+      <p class="eyebrow">Community · Part 3 of 3</p>
+      <h1>Community Depth</h1>
+      <p class="lead">Designing for Depth: Guiding Vulnerability, Removing Noise</p>
+
+      <div class="project-meta">
+        <div class="project-meta__item">
+          <span class="project-meta__label">Role</span>
+          <span class="project-meta__value">Community UX Designer, Lore</span>
+        </div>
+        <div class="project-meta__item">
+          <span class="project-meta__label">Timeline</span>
+          <span class="project-meta__value">Add timeline</span>
+        </div>
+        <div class="project-meta__item">
+          <span class="project-meta__label">Tools</span>
+          <span class="project-meta__value">Figma, FigJam</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <h2 class="story__act">The problem</h2>
+
+        <div class="beat">
+          <p>Daily reflection fixed the blank page, and personal plants weren&rsquo;t hijacking motivation the way they had before. But tone and depth were still inconsistent &mdash; some replies were vulnerable and specific, others stayed surface-level, and the product made no distinction between them. We wanted to reinforce better norms, but enforcement &mdash; flagging, rejecting, scoring posts &mdash; would undermine the trust the whole product depended on.</p>
+        </div>
+
+        <h2 class="story__act">Round 1: Conveyance</h2>
+
+        <div class="beat">
+          <p><strong>Hypothesis.</strong> If people received gentle guidance while they were still writing, they might go deeper on their own, without ever feeling corrected.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Intervention.</strong> We built Conveyance into the draft experience itself. A &ldquo;go deeper&rdquo; tap surfaced prompts nudging toward specificity and reflection &mdash; not rules, just questions. When something met the bar, the system offered quiet positive reinforcement instead of silence.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>What happened.</strong> The impact was hard to measure directly &mdash; there&rsquo;s no clean metric for &ldquo;did this prompt make someone more honest.&rdquo; But early signals pointed toward improved depth and tone across the community.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Learning.</strong> Support lands best at the moment someone is already being vulnerable &mdash; not before, when it feels like a rule, and not after, when it feels like a correction.</p>
+        </div>
+
+        <h2 class="story__act">Round 2: Removing hubs entirely</h2>
+
+        <div class="beat">
+          <p><strong>Problem.</strong> Even with better guidance at the moment of writing, the surrounding structure still worked against the mission. Hubs and infinite scroll grouped content, but they still rewarded volume &mdash; the more there was to scroll, the more the product looked like every other feed we&rsquo;d been trying to move away from.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Hypothesis.</strong> Therefore we asked: what if we did the opposite of adding more structure? If we reduced volume and increased intentional curation, people might engage more meaningfully with less content, not more.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Intervention.</strong> We removed hubs. No infinite scroll, no broad feeds to browse. What replaced it looked like the &ldquo;Limited community&rdquo; screen: a daily reflection prompt at the top, a short curated list of live conversations &mdash; &ldquo;Testing Limits,&rdquo; &ldquo;No Taco Tuesday,&rdquo; &ldquo;Struggling with Sleep&rdquo; &mdash; instead of an open-ended tab of hubs, and a small, specific row of people you were actually connected to instead of an anonymous crowd. Everything on screen was shaped by our models and social standards to maximize the chance of an actual shift in perspective, not to maximize time on screen.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Learning.</strong> Sometimes the right structure is less structure. Designing for reflection means actively resisting the patterns &mdash; infinite scroll, broad feeds, more-is-better &mdash; that the rest of the internet has trained both users and designers to reach for by default.</p>
+        </div>
+
+      </div>
+    </article>
+
+    <nav class="container series" aria-label="Community series">
+      <p class="series__label">A three-part series on designing for community.</p>
+      <ol class="series__list">
+        <li class="series__item"><a href="community-organization.html">Part 1 — Community Organization &rarr;</a></li>
+        <li class="series__item"><a href="community-ownership.html">Part 2 — Community Ownership &rarr;</a></li>
+        <li class="series__item series__item--current">Part 3 — Community Depth</li>
+      </ol>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

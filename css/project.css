@@ -1,0 +1,399 @@
+/* Page-specific layout for project detail pages. Uses tokens only. */
+
+.project-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-accent);
+}
+
+.project-back:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Banner placeholder above the write-up. Swap for an <img> when you have one. */
+.project-media {
+  aspect-ratio: 16 / 7;
+  margin-top: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent-muted);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-lg);
+}
+
+/* Quick facts row: role, timeline, tools. */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.project-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.project-meta__label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.project-meta__value {
+  color: var(--color-text);
+}
+
+.project-section {
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.project-section__title {
+  margin-bottom: var(--space-4);
+}
+
+/* Prose block: paragraphs and bullet lists for the write-up. */
+.prose {
+  max-width: 70ch;
+}
+
+.prose p {
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.prose p + p {
+  margin-top: var(--space-4);
+}
+
+.prose ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.prose li {
+  position: relative;
+  padding-left: var(--space-4);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.prose li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+/* ==========================================================================
+   CASE-STUDY STORY
+   A narrow, airy single column that reveals one short beat at a time.
+   White space does the pacing; act markers give a scannable spine.
+   ========================================================================== */
+
+.story {
+  max-width: 60ch;
+  margin-inline: auto;
+  padding-block: var(--space-8);
+}
+
+.story__act {
+  margin-top: var(--space-9);
+  margin-bottom: var(--space-2);
+  text-align: left;
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-accent);
+}
+
+.story__act:first-child {
+  margin-top: 0;
+}
+
+.beat {
+  margin-top: var(--space-8);
+}
+
+.story__act + .beat {
+  margin-top: var(--space-5);
+}
+
+.beat p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+}
+
+.beat ol,
+.beat ul {
+  margin-top: var(--space-3);
+  padding-left: var(--space-6);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+}
+
+.beat ol { list-style: decimal; }
+.beat ul { list-style: disc; }
+
+.beat li {
+  margin-bottom: var(--space-2);
+}
+
+/* Beat + its image sit closer together than beat-to-beat, so the image
+   reads as part of the beat it follows. */
+.story-figure {
+  margin: 0;
+  margin-top: var(--space-6);
+}
+
+.story-figure .project-media {
+  margin-top: 0;
+}
+
+.story-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+/* When a figure holds more than one image, space them apart. */
+.story-figure img + img {
+  margin-top: var(--space-4);
+}
+
+/* ==========================================================================
+   BAR CHART  (simple, responsive rebuild of Figma bar charts)
+   ========================================================================== */
+
+.barchart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--space-8);
+  height: 220px;
+}
+
+.barchart__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 96px;
+}
+
+.barchart__track {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.barchart__value {
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.barchart__bar {
+  width: 100%;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.barchart__label {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ==========================================================================
+   LIGHTBOX  (tap a figure to enlarge — makes detailed screenshots readable
+   on small screens)
+   ========================================================================== */
+
+.zoomable {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background-color: rgba(28, 34, 28, 0.92);
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-md);
+  cursor: zoom-out;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-2xl);
+  line-height: 1;
+  color: var(--color-text-on-accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   NAVY THEME  (page-level dark theme — e.g. the Unite.ly case study)
+   Overrides the neutral color tokens so the whole content area flips dark.
+   The header keeps the site green (--color-accent is left unchanged); accent
+   elements inside the content are brightened so they read on navy.
+   ========================================================================== */
+
+.theme-navy {
+  --color-bg: #19202E;         /* Unite.ly brand navy */
+  --color-text: #FFFFFF;
+  --color-text-muted: #AEB6C2; /* light slate for secondary text */
+  --color-surface: #232B3A;
+  --color-accent-muted: #232B3A;
+  --color-border: #333C4D;
+}
+
+.theme-navy .eyebrow,
+.theme-navy .project-back,
+.theme-navy .project-back:hover,
+.theme-navy .site-footer__links a:hover {
+  color: #2BB673; /* brighter emerald so accents read on navy */
+}
+
+.theme-navy .barchart__bar {
+  background-color: #2BB673;
+}
+
+.theme-navy .project-media {
+  color: var(--color-text-muted);
+}
+
+.story-figure figcaption {
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   STORY READING  (long-form prose: short stories, essays)
+   ========================================================================== */
+
+.story-byline {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.story-read {
+  max-width: 62ch;
+  margin-inline: auto;
+  padding-block: var(--space-8);
+}
+
+.story-read p {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.story-read p + p {
+  margin-top: var(--space-4);
+}
+
+.story-read ol {
+  margin-block: var(--space-4);
+  padding-left: var(--space-6);
+  list-style: decimal;
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.story-read ol li {
+  margin-bottom: var(--space-2);
+}
+
+.story-read__break {
+  width: 6ch;
+  margin: var(--space-7) auto;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Series index: shows the arc of related parts and marks the current one. */
+.series {
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.series__label {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.series__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.series__item {
+  font-size: var(--text-lg);
+}
+
+.series__item a {
+  color: var(--color-accent);
+  font-weight: var(--font-medium);
+}
+
+.series__item a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* The part you're currently reading: not a link, quietly de-emphasized. */
+.series__item--current {
+  color: var(--color-text-muted);
+  font-weight: var(--font-medium);
+}

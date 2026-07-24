@@ -98,8 +98,8 @@ section {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-accent);
+  border-bottom: 1px solid var(--color-accent-hover);
 }
 
 .nav {
@@ -110,9 +110,18 @@ section {
 }
 
 .nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
-  color: var(--color-accent);
+  color: var(--color-text-on-accent);
+}
+
+.nav__logo {
+  display: block;
+  height: 28px;
+  width: auto;
 }
 
 .nav__links {
@@ -123,19 +132,20 @@ section {
 .nav__link {
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  color: var(--color-text);
+  color: var(--color-text-on-accent);
   padding-block: var(--space-2);
   border-bottom: 2px solid transparent;
   transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .nav__link:hover {
-  color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border-bottom-color: var(--color-text-on-accent);
 }
 
 .nav__link.is-active {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border-bottom-color: var(--color-text-on-accent);
 }
 
 .nav__toggle {
@@ -145,9 +155,9 @@ section {
   width: 40px;
   height: 40px;
   background: none;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-text-on-accent);
   border-radius: var(--radius-sm);
-  color: var(--color-text);
+  color: var(--color-text-on-accent);
 }
 
 .nav__toggle-icon {
@@ -176,7 +186,7 @@ section {
   flex-direction: column;
   gap: var(--space-1);
   padding-block: var(--space-3) var(--space-5);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-accent-hover);
 }
 
 .nav__mobile-panel.is-open {
@@ -191,7 +201,8 @@ section {
 
 .nav__mobile-panel .nav__link.is-active,
 .nav__mobile-panel .nav__link:hover {
-  background-color: var(--color-accent-muted);
+  background-color: var(--color-accent-hover);
+  border-bottom-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -255,6 +266,18 @@ section {
   transform: translateY(-2px);
 }
 
+/* A card that is itself a link to a project detail page. */
+a.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.card:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
 .card__media {
   aspect-ratio: 4 / 3;
   background-color: var(--color-accent-muted);
@@ -263,6 +286,26 @@ section {
   justify-content: center;
   color: var(--color-accent);
   font-size: var(--text-sm);
+}
+
+/* An image (or SVG) used as the card thumbnail fills the media area. */
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Brand-colored card media — a project logo on its own brand background. */
+.card__media--unitely {
+  background-color: #19202E; /* Unite.ly brand navy */
+  padding: var(--space-6);
+}
+
+.card__media--unitely img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .card__body {
@@ -310,6 +353,38 @@ section {
   flex-direction: column;
   gap: var(--space-3);
   max-width: 640px;
+}
+
+/* Home hero — a full-width banner that scales with the page, above a
+   one-line title, with generous white space between. */
+.home-hero {
+  padding-block: var(--space-7) var(--space-8);
+}
+
+.home-hero__banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space-5); /* 24px */
+}
+
+.home-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.home-hero__title {
+  font-size: clamp(1.25rem, 6.8vw, var(--text-3xl));
+  white-space: nowrap;
+}
+
+/* Left-aligned section title above the project grid. */
+.projects-heading {
+  margin-bottom: var(--space-5);
 }
 
 /* ==========================================================================

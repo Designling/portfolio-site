@@ -42,6 +42,13 @@
   margin-bottom: 0;
 }
 
+/* Page heading, now sitting in the column beside the profile photo. */
+.about-heading {
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-tight);
+}
+
 .about-facts {
   display: grid;
   gap: var(--space-3);
@@ -73,4 +80,19 @@
   margin: 0;
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
+}
+
+/* ==========================================================================
+   STORIES SECTION
+   The cards themselves reuse the portfolio card component (.grid--cards +
+   .card) so they match the project cards exactly. Only the section wrapper
+   and its heading are local.
+   ========================================================================== */
+
+.about-stories {
+  padding-block: var(--space-4) var(--space-8);
+}
+
+.about-stories__title {
+  margin-bottom: var(--space-5);
 }

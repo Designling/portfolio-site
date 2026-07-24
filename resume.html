@@ -9,15 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/resume.css">
+  <link rel="stylesheet" href="css/tokens.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/resume.css?v=2">
 </head>
 <body>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
-      <a href="index.html" class="nav__brand">Aaron</a>
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
 
       <div class="nav__links">
         <a href="index.html" class="nav__link">Portfolio</a>
@@ -38,47 +41,97 @@
   </header>
 
   <main>
+    <div class="resume-sheet">
     <section class="hero container">
       <p class="eyebrow">Resume</p>
-      <h1>Experience &amp; skills</h1>
-      <p class="lead">Replace this with a short summary line, or remove it if the sections below speak for themselves.</p>
+      <h1>Aaron Ebeling</h1>
+      <p class="lead">UX designer with 5 years of experience spanning nonprofit, government, and startup work. I am at my best amid ambiguous problems, competing priorities, and groups still searching for what success looks like.</p>
+      <p class="resume-contact">
+        <a href="mailto:aebeling5@gmail.com">aebeling5@gmail.com</a>
+        <span aria-hidden="true">·</span>
+        <a href="tel:+16105506365">610-550-6365</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://is.gd/PortfolioAaronEbeling" target="_blank" rel="noopener">Portfolio</a>
+      </p>
     </section>
 
-    <div class="container resume-toolbar">
-      <!-- Swap href for a real PDF once you have one, e.g. files/aaron-resume.pdf -->
-      <a class="btn btn--secondary" href="#" download>Download PDF</a>
-    </div>
+    <section class="container resume-section">
+      <h2 class="resume-section__title">Career Highlights</h2>
+      <ul class="resume-entry__list">
+        <li>Brought a fragmented, four-generations-deep design system into over 90% team-wide compliance within two months.</li>
+        <li>Drove a significant, sustained increase in community engagement by designing for user ownership.</li>
+        <li>Won a government contract by designing a new application in a week.</li>
+      </ul>
+    </section>
 
     <section class="container resume-section">
       <h2 class="resume-section__title">Work Experience</h2>
 
-      <div class="resume-entry">
+      <div class="resume-company">
         <div class="resume-entry__header">
-          <div>
-            <span class="resume-entry__role">Job Title</span> ·
-            <span class="resume-entry__org">Company Name</span>
-          </div>
-          <span class="resume-entry__dates">Month Year – Present</span>
+          <h3 class="resume-company__name">Lore</h3>
+          <span class="resume-entry__dates">Aug 2024 – Jul 2026</span>
         </div>
-        <ul class="resume-entry__list">
-          <li>Replace with a specific, results-oriented bullet about what you did and its impact.</li>
-          <li>Second bullet — quantify outcomes where you can (%, time saved, users, revenue).</li>
-          <li>Third bullet, optional — keep each entry to 2–4 bullets max.</li>
-        </ul>
+        <p class="resume-entry__org-desc">A startup redefining the health risk marketplace through community and AI-driven reflection, helping people build better judgment and better health outcomes.</p>
+
+        <div class="resume-role">
+          <p class="resume-role__title">Operational UX Designer</p>
+          <ul class="resume-entry__list">
+            <li>Brought the design team into over 90% compliance by consolidating a fragmented design-system landscape — an outdated core library and seven legacy libraries — into a single tokenized system.</li>
+            <li>Accelerated branded image creation from days to minutes while improving brand compliance by establishing the core rules for the company's AI image generator.</li>
+            <li>Eliminated a recurring category of customer-care calls caused by user error during signup by redesigning the account creation and onboarding flow.</li>
+          </ul>
+        </div>
+
+        <div class="resume-role">
+          <p class="resume-role__title">Community Squad Writer</p>
+          <ul class="resume-entry__list">
+            <li>Achieved an 85% first-pass acceptance rate for roadmaps centered on pioneering, high-risk features by defining clear product direction.</li>
+            <li>Aligned ML, data, frontend, backend, and sales teams on strategic product direction by facilitating design thinking workshops that focused stakeholders on problems before solutions.</li>
+          </ul>
+        </div>
+
+        <div class="resume-role">
+          <p class="resume-role__title">Community UX Designer</p>
+          <ul class="resume-entry__list">
+            <li>Drove a significant, sustained increase in community engagement across posting, reading, and commenting by designing for user ownership.</li>
+            <li>Improved users' intentionality with their community interactions by restructuring the community experience — reducing scroll time and increasing dwell time.</li>
+            <li>Increased meaningful user self-expression by 8% by redesigning posting and moderation experiences to encourage more reflective, experience-based posts.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="resume-entry">
+      <div class="resume-company">
         <div class="resume-entry__header">
-          <div>
-            <span class="resume-entry__role">Job Title</span> ·
-            <span class="resume-entry__org">Previous Company</span>
-          </div>
-          <span class="resume-entry__dates">Month Year – Month Year</span>
+          <h3 class="resume-company__name">Centeva</h3>
+          <span class="resume-entry__dates">Mar 2022 – Aug 2024</span>
         </div>
-        <ul class="resume-entry__list">
-          <li>Replace with a specific, results-oriented bullet about what you did and its impact.</li>
-          <li>Second bullet — quantify outcomes where you can (%, time saved, users, revenue).</li>
-        </ul>
+        <p class="resume-entry__org-desc">Government contractor in custom software development. Worked on 9 UX projects: led 5, collaborated on 4, designing custom and government off-the-shelf products.</p>
+
+        <div class="resume-role">
+          <p class="resume-role__title">UI/UX Designer</p>
+          <ul class="resume-entry__list">
+            <li>Won a contract for a 3-month project by designing a new application.</li>
+            <li>Reduced client time on task by 4 hours per week by advocating for a 2-hour expansion to the project's development scope.</li>
+            <li>Freed up one-third of a six-person team's capacity by creating an automated workflow.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-company">
+        <div class="resume-entry__header">
+          <h3 class="resume-company__name">Eden Streets</h3>
+          <span class="resume-entry__dates">Oct 2020 – Mar 2022</span>
+        </div>
+        <p class="resume-entry__org-desc">Non-profit that connects urban farms with social missions across the country. Created their branding guide, print materials, website, and marketing materials.</p>
+
+        <div class="resume-role">
+          <p class="resume-role__title">Brand &amp; UX Designer</p>
+          <ul class="resume-entry__list">
+            <li>Created a potential client list with 200+ farms across the country.</li>
+            <li>Doubled the membership of Eden Streets from 12 to 24 members in two months by designing a marketing script.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -88,28 +141,39 @@
       <div class="resume-entry">
         <div class="resume-entry__header">
           <div>
-            <span class="resume-entry__role">Degree, Field of Study</span> ·
-            <span class="resume-entry__org">School Name</span>
+            <span class="resume-entry__role">B.S. Sociology, Minor in Business Management</span> ·
+            <span class="resume-entry__org">Brigham Young University</span>
           </div>
-          <span class="resume-entry__dates">Year – Year</span>
+          <span class="resume-entry__dates">Jan 2013 – Jun 2019</span>
         </div>
-        <ul class="resume-entry__list">
-          <li>Optional: honors, relevant coursework, or activities.</li>
-        </ul>
       </div>
     </section>
 
     <section class="container resume-section">
       <h2 class="resume-section__title">Skills</h2>
       <div class="tag-list">
-        <span class="tag">Skill One</span>
-        <span class="tag">Skill Two</span>
-        <span class="tag">Skill Three</span>
-        <span class="tag">Skill Four</span>
-        <span class="tag">Skill Five</span>
-        <span class="tag">Skill Six</span>
+        <span class="tag">Usability testing</span>
+        <span class="tag">Product strategy</span>
+        <span class="tag">Design vision &amp; roadmapping</span>
+        <span class="tag">Stakeholder management</span>
+        <span class="tag">Storytelling</span>
+        <span class="tag">Cross-functional collaboration (Eng, Data Science, ML)</span>
+        <span class="tag">Workshop facilitation</span>
+        <span class="tag">Figma</span>
+        <span class="tag">FigJam</span>
+        <span class="tag">Cursor</span>
       </div>
     </section>
+
+    <section class="container resume-section">
+      <h2 class="resume-section__title">Personal</h2>
+      <ul class="resume-entry__list">
+        <li><strong>Father:</strong> I have three fantastic girls.</li>
+        <li><strong>Writer:</strong> I've written a novella and a collection of short stories.</li>
+        <li><strong>Role Model:</strong> Santa.</li>
+      </ul>
+    </section>
+    </div>
   </main>
 
   <footer class="site-footer">

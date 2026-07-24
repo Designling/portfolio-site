@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Ownership — Aaron</title>
+  <meta name="description" content="Community Ownership — designing for user ownership to lift community engagement.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/project.css?v=2">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <a class="project-back" href="index.html">&larr; Back to portfolio</a>
+      <p class="eyebrow">Community · Part 2 of 3</p>
+      <h1>Community Ownership</h1>
+      <p class="lead">Designing for Participation: Plants, and the Search for a Reason to Show Up</p>
+
+      <div class="project-meta">
+        <div class="project-meta__item">
+          <span class="project-meta__label">Role</span>
+          <span class="project-meta__value">Community UX Designer, Lore</span>
+        </div>
+        <div class="project-meta__item">
+          <span class="project-meta__label">Timeline</span>
+          <span class="project-meta__value">Add timeline</span>
+        </div>
+        <div class="project-meta__item">
+          <span class="project-meta__label">Tools</span>
+          <span class="project-meta__value">Figma, FigJam</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <h2 class="story__act">The problem</h2>
+
+        <div class="beat">
+          <p>Hubs gave people a place to find relevant conversation. They didn&rsquo;t give people a reason to feel like that place was theirs. Even inside a hub, participation felt transactional &mdash; post, maybe get a reply, move on.</p>
+        </div>
+
+        <h2 class="story__act">Round 1: A plant for every theme</h2>
+
+        <div class="beat">
+          <p><strong>Hypothesis.</strong> If people could see their own investment in something they cared about, they might feel ownership over it &mdash; not the community&rsquo;s ownership, their ownership.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Intervention.</strong> Themes sat above hubs in the hierarchy &mdash; Mental, Diet, Family, Goals, Hard Stuff, Financial, Medication, Exercise &mdash; with hubs like #Meditation or #Breathing living underneath. We gave each theme its own plant, but the plant wasn&rsquo;t a group score. It was personal: it reflected whether you were engaging with that theme. Show up, and it grew. Stay away, and it got shelved &mdash; not punished, just quietly archived as something that wasn&rsquo;t relevant to you right now.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>What happened.</strong> The idea landed well with the squad &mdash; it made caring about something visible without making it a leaderboard. But tracking a personal plant state for every user, across every theme, was a much heavier build than a single shared indicator. We lost our frontend engineer mid-project, and the system was too complex to ship responsibly at that point.</p>
+        </div>
+
+        <div class="beat">
+          <p>We shelved it ourselves. Not because the idea was wrong, but because shipping it well would have meant cutting corners on something meant to feel personal. Good ideas still have to survive reality &mdash; and letting go of one is a design decision, not a failure of one.</p>
+        </div>
+
+        <h2 class="story__act">Round 2: One plant per person</h2>
+
+        <div class="beat">
+          <p><strong>Hypothesis.</strong> Therefore we asked: what&rsquo;s the smallest version of personal ownership we could still ship &mdash; one plant per person, reflecting their own participation.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Intervention.</strong> Reading, commenting, or posting all watered it. The plant grew larger over time, eventually blooming &mdash; a lightweight, individual signal that was actually yours.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>What worked.</strong> Participation rose. People hadn&rsquo;t had anything like this before, and because the plant was genuinely theirs, they owned it.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>What didn&rsquo;t.</strong> Ownership worked almost too well. Some users started posting for the plant &mdash; to make it grow &mdash; rather than because they had something they actually wanted to reflect on. The plant had successfully become a reason to participate, but for some people it had quietly replaced the original reason to participate.</p>
+        </div>
+
+        <div class="beat">
+          <p>The signal was the same as before, but the mechanism behind it was different: engagement is not the same as connection &mdash; not because nobody felt ownership, but because ownership over a growth mechanic can motivate behavior all on its own, disconnected from whether the person had anything real to say.</p>
+        </div>
+
+        <h2 class="story__act">Round 3: Giving people something to say</h2>
+
+        <div class="beat">
+          <p><strong>Problem.</strong> If participation could be triggered by a mechanic instead of a genuine impulse to reflect, the content itself needed a better source than &ldquo;I want my plant to grow.&rdquo; Some users also simply didn&rsquo;t know what to share, mechanic aside.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Hypothesis.</strong> A shared daily prompt could give everyone a reason to post that had nothing to do with watering anything &mdash; a reason rooted in a real question, at a real moment, shared by everyone at once.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Intervention.</strong> We shipped a daily reflection channel &mdash; one prompt a day, the same for everyone. A prompt like &ldquo;Share a memory associated with food that holds special meaning for you. How does it connect to your current relationship with food?&rdquo; gives people permission, not just an opening.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>What worked.</strong> Participation jumped again, but this time content got deeper &mdash; the prompt pulled people back toward reflecting on something specific rather than posting to hit a growth threshold.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>What didn&rsquo;t.</strong> The prompt shaped what people shared, but not consistently how. Tone and depth stayed uneven &mdash; some replies were vulnerable and specific, others stayed surface-level, and nothing in the product distinguished between them.</p>
+        </div>
+
+        <h2 class="story__act">Learning</h2>
+
+        <div class="beat">
+          <p>Three rounds, one throughline: personal ownership drives participation &mdash; sometimes more effectively than intended, to the point that the mechanic itself becomes the motivation. Daily reflection solved for genuine reason-to-post. It didn&rsquo;t yet solve for quality of what got posted &mdash; which is exactly where the next intervention had to start.</p>
+        </div>
+
+      </div>
+    </article>
+
+    <nav class="container series" aria-label="Community series">
+      <p class="series__label">A three-part series on designing for community.</p>
+      <ol class="series__list">
+        <li class="series__item"><a href="community-organization.html">Part 1 — Community Organization &rarr;</a></li>
+        <li class="series__item series__item--current">Part 2 — Community Ownership</li>
+        <li class="series__item"><a href="community-depth.html">Part 3 — Community Depth &rarr;</a></li>
+      </ol>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

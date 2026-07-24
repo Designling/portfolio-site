@@ -9,15 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/tokens.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/about.css?v=4">
 </head>
 <body>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
-      <a href="index.html" class="nav__brand">Aaron</a>
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
 
       <div class="nav__links">
         <a href="index.html" class="nav__link">Portfolio</a>
@@ -38,20 +41,16 @@
   </header>
 
   <main>
-    <section class="hero container">
-      <p class="eyebrow">About</p>
-      <h1>Hi, I'm Aaron</h1>
-      <p class="lead">Replace this with a one-line summary of who you are and what you do.</p>
-    </section>
-
     <section class="container">
       <div class="about-grid">
         <div class="about-photo">
-          <!-- Swap for: <img src="images/profile.jpg" alt="Photo of Aaron"> -->
-          Profile photo
+          <img src="images/profile-picture.png" alt="Photo of Aaron Ebeling">
         </div>
 
         <div class="about-bio">
+          <h1 class="about-heading">Hi, I'm Aaron</h1>
+          <p class="lead">Replace this with a one-line summary of who you are and what you do.</p>
+
           <p>
             Replace this paragraph with your real bio: where you're from, what you've worked
             on, and what drives you. Keep it to two or three short paragraphs — a portfolio
@@ -78,6 +77,37 @@
             </div>
           </dl>
         </div>
+      </div>
+    </section>
+
+    <section class="container about-stories">
+      <h2 class="about-stories__title">Stories</h2>
+      <div class="grid grid--cards">
+
+        <a class="card" href="story-one.html">
+          <div class="card__media">Story image</div>
+          <div class="card__body">
+            <h3 class="card__title">My Accidental Wish</h3>
+            <p class="card__desc">A teenager, a genie lamp, and a mortifying day at school — a short story about embarrassment, the way we talk to ourselves, and the wish that finally mattered.</p>
+          </div>
+        </a>
+
+        <a class="card" href="story-two.html">
+          <div class="card__media">Story image</div>
+          <div class="card__body">
+            <h3 class="card__title">The Leper</h3>
+            <p class="card__desc">A leper hiding in a seaside cave watches a healer draw crowds — and has to decide whether she can bear to be seen. A retelling about shame, waiting too long, and being found.</p>
+          </div>
+        </a>
+
+        <a class="card" href="story-three.html">
+          <div class="card__media">Story image</div>
+          <div class="card__body">
+            <h3 class="card__title">Fragments of Hope</h3>
+            <p class="card__desc">A novella. Eight years into a pilgrimage that never brought the miracle she was promised, Imana serves at the temple — waiting, and wondering whether the Almighty ever cared. (Chapter One)</p>
+          </div>
+        </a>
+
       </div>
     </section>
   </main>

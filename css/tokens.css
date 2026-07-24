@@ -15,9 +15,12 @@
   --color-accent-muted: #E4E9D6;/* pale green tint for subtle fills/badges */
 
   /* ---- Color: text ---- */
-  --color-text: #1C221C;        /* body copy, near-black with a green cast */
+  --color-text-grey: #6E6E6E;   /* neutral dark grey; ~4.95:1 on --color-bg,
+                                   ~5.33:1 on --color-surface — passes WCAG AA
+                                   (4.5:1) for normal-size body text */
+  --color-text: var(--color-text-grey); /* body copy */
   --color-text-muted: #5A6B5C;  /* secondary text: dates, captions, labels */
-  --color-text-on-accent: #FCFDEA; /* text placed on top of --color-accent */
+  --color-text-on-accent: #FFFFFF; /* text placed on top of --color-accent */
 
   /* ---- Color: structure ---- */
   --color-border: #D9DEC4;      /* hairline borders / dividers */

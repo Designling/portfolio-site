@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Organization — Aaron</title>
+  <meta name="description" content="Community Organization — restructuring the community experience to make interactions more intentional.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/project.css?v=2">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <a class="project-back" href="index.html">&larr; Back to portfolio</a>
+      <p class="eyebrow">Community · Part 1 of 3</p>
+      <h1>Community Organization</h1>
+      <p class="lead">Designing for Discovery: From Feed to Hubs</p>
+
+      <div class="project-meta">
+        <div class="project-meta__item">
+          <span class="project-meta__label">Role</span>
+          <span class="project-meta__value">Community UX Designer, Lore</span>
+        </div>
+        <div class="project-meta__item">
+          <span class="project-meta__label">Timeline</span>
+          <span class="project-meta__value">Add timeline</span>
+        </div>
+        <div class="project-meta__item">
+          <span class="project-meta__label">Tools</span>
+          <span class="project-meta__value">Figma, FigJam</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <h2 class="story__act">The problem</h2>
+
+        <div class="beat">
+          <p>Lore launched with a single reverse-chronological feed. Open the app and you’d scroll past a sleep-tips post, then a one-word reflection on peace, then a video about making friends, then a story about an ice bath — all with equal weight, in whatever order they’d been posted.</p>
+        </div>
+
+        <div class="beat">
+          <p>That’s fine when the goal is keeping people scrolling. It’s the wrong model when the goal is helping someone feel less alone in something specific. A user struggling with sleep had no way to find the other people talking about sleep. They could see that people were reflecting, but not where their reflection belonged.</p>
+        </div>
+
+        <div class="beat">
+          <p>New users felt this hardest — they’d land on a feed of strangers’ unrelated posts, find nothing that spoke to them, and leave.</p>
+        </div>
+
+        <h2 class="story__act">The hypothesis</h2>
+
+        <div class="beat">
+          <p>We could have improved ranking. But better ranking still optimizes for what to show next, not for helping someone find where they fit — and belonging was the actual mission.</p>
+        </div>
+
+        <div class="beat">
+          <p>Therefore we asked a narrower question: could we help people find relevance — a topic, a recurring set of voices, a place — before we tried to help them find content.</p>
+        </div>
+
+        <h2 class="story__act">The intervention</h2>
+
+        <div class="beat">
+          <p>We built organic hubs on top of existing autolinking. As posts were written, the system auto-tagged them against topics like #Meditation, #Breathing, #Overwhelm — no manual categorizing required. A post could carry more than one tag and route into more than one hub, so a meditation post that touched on anxiety could surface in both places.</p>
+        </div>
+
+        <div class="beat">
+          <p>Hubs weren’t groups you joined. They were lenses onto the same content — letting someone filter “Finding Strength in Meditation” out of the general stream and into a thread with people circling the same thing.</p>
+        </div>
+
+        <h2 class="story__act">What worked</h2>
+
+        <div class="beat">
+          <p>Super users adopted hubs almost immediately. They used the tag filters to track recurring topics, recognize familiar names, and reply with intention instead of posting into the void. The underlying theory held: given a way to find context, people reciprocated.</p>
+        </div>
+
+        <h2 class="story__act">What didn’t</h2>
+
+        <div class="beat">
+          <p>It didn’t reach the users who needed it most. A new or quiet user still had to know a hub existed, know to tap into it, and post with no signal anyone would respond. Discovery still rewarded people who were already active and confident — the same users who didn’t need help finding belonging in the first place.</p>
+        </div>
+
+        <div class="beat">
+          <p>Autolinking solved where content goes. It did nothing for who shows up.</p>
+        </div>
+
+        <h2 class="story__act">Learning</h2>
+
+        <div class="beat">
+          <p>Categorization is an organizing tool, not an onboarding tool. Hubs gave structure to conversations that already had momentum, but structure alone can’t create someone’s first reason to speak. That gap — the cold start, the blank-page moment — needed a different kind of intervention, which is where the next round of experiments picked up.</p>
+        </div>
+
+      </div>
+    </article>
+
+    <nav class="container series" aria-label="Community series">
+      <p class="series__label">A three-part series on designing for community.</p>
+      <ol class="series__list">
+        <li class="series__item series__item--current">Part 1 — Community Organization</li>
+        <li class="series__item"><a href="community-ownership.html">Part 2 — Community Ownership &rarr;</a></li>
+        <li class="series__item"><a href="community-depth.html">Part 3 — Community Depth &rarr;</a></li>
+      </ol>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

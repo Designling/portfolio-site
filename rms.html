@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMS — Aaron Ebeling</title>
+  <meta name="description" content="RMS — a records management system for long-term physical storage: creating warehouse space, designing a smarter waitlist, and fixing the decommission flow.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/project.css?v=8">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <a class="project-back" href="index.html">&larr; Back to portfolio</a>
+      <p class="eyebrow">Case Study</p>
+      <h1>Records Management System</h1>
+      <p class="lead">Creating warehouse space and a smarter waitlist for long-term physical storage &mdash; with a bonus fix for a painful decommission flow.</p>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <h2 class="story__act">Context</h2>
+
+        <div class="beat">
+          <p>RMS manages the long term storage of transfers (groups of physical boxes). It allows people to submit transfers, check stored things out, and eventually decommission them.</p>
+        </div>
+
+        <div class="beat">
+          <p>The system worked well for a while, but over time as transfers were decommissioned and new transfers were added, the system gained empty spaces that could only fit small transfers. So when large transfers did come in, the RMS program was unable to handle them.</p>
+        </div>
+
+        <figure class="story-figure">
+          <div class="project-media">Image placeholder</div>
+          <figcaption>The problem &mdash; the warehouse fills with gaps too small for large transfers.</figcaption>
+        </figure>
+
+        <h2 class="story__act">Methodology</h2>
+
+        <div class="beat">
+          <p>I used human centered design tools to develop these solutions and went through several iterations working directly with the client and developers.</p>
+        </div>
+
+        <figure class="story-figure">
+          <div class="project-media">Image placeholder</div>
+          <figcaption>The human-centered design process (SVG diagram).</figcaption>
+        </figure>
+
+        <h2 class="story__act">Case</h2>
+
+        <div class="beat">
+          <p>Centeva was asked to create:</p>
+          <ol>
+            <li>A way to move transfers within the warehouse.</li>
+            <li>A waitlisting system to improve warehouse efficiency and storage capacity.</li>
+          </ol>
+        </div>
+
+        <h2 class="story__act">Ch 1: Moving Transfers</h2>
+
+        <div class="beat">
+          <p>The challenge was to create space in a massive warehouse. So I thought of automation. The system knew where space was and just needed the power to create larger spaces.</p>
+        </div>
+
+        <div class="beat">
+          <p>Clients loved it, but due to development constraints we decided against it.</p>
+        </div>
+
+        <figure class="story-figure">
+          <img src="images/rms-iteration-1.png" alt="Iteration 1 — automation. A form asking for the space needed, with an 'Allow Secondary Moves' option and a Find button.">
+          <figcaption>First idea: automation. Enter the space needed and let the system make room.</figcaption>
+        </figure>
+
+        <figure class="story-figure">
+          <img src="images/rms-iteration-2.png" alt="The system reports 'Space Found: 50' and 'Number of moves: 13', listing each box move (for example, 4 boxes from A234 to B403).">
+          <figcaption>The system works out the moves needed to open up space &mdash; but development constraints ruled it out.</figcaption>
+        </figure>
+
+        <div class="beat">
+          <p>So I simplified the automation so the system could identify areas that would fit a selected transfer.</p>
+        </div>
+
+        <div class="beat">
+          <p>Clients loved it again, but when we started building it, development ran into roadblocks and we moved away from the idea.</p>
+        </div>
+
+        <figure class="story-figure">
+          <img src="images/rms-iteration-3.png" alt="A selected transfer (Dark Saber 234, 15 boxes) with its current location and a sortable list of possible locations to move it to.">
+          <figcaption>Simplified: pick a transfer and see the areas that would fit it. Loved again &mdash; until development hit roadblocks.</figcaption>
+        </figure>
+
+        <div class="beat">
+          <p>So, I started playing with drag and drop options. How could I use drag and drop functionality in such a large warehouse?</p>
+        </div>
+
+        <div class="beat">
+          <p>When I showed the designs to our development team, they loved it, but when I showed designs to the client they struggled to use it.</p>
+        </div>
+
+        <figure class="story-figure">
+          <img src="images/rms-iteration-4.png" alt="Iteration 4 — a warehouse grid with a holding area, giving users free reign to move a transfer anywhere; they can't save until the holding area is clear.">
+          <figcaption>Free reign to move transfers anywhere in the warehouse. The dev team loved it &mdash; but clients struggled to use it.</figcaption>
+        </figure>
+
+        <div class="beat">
+          <p>So I made navigation more fluid and created a holding area for transfers.</p>
+        </div>
+
+        <figure class="story-figure">
+          <img src="images/rms-iteration-4-1.png" alt="Iteration 5 — the warehouse grid with up and down navigation between areas and a receipt panel; users move between rows and areas to place a transfer.">
+          <figcaption>More fluid navigation &mdash; moving between areas of the warehouse to place a transfer.</figcaption>
+        </figure>
+
+        <h2 class="story__act">Chosen Solution</h2>
+
+        <figure class="story-figure">
+          <img src="images/rms-chosen-solution.png" alt="The chosen solution — a warehouse view with a holding area, search by transfer number, largest-space / open-space / boxes-in-storage stats, pagination, and a log of moved transfers.">
+          <figcaption>The chosen solution: a holding area, search, easy navigation, and a running log of every move.</figcaption>
+        </figure>
+
+        <h2 class="story__act">Ch 2: The Waitlist</h2>
+
+        <div class="beat">
+          <p>During the product discovery period, I found some problems with using a traditional waitlist.</p>
+          <ol>
+            <li>Boxes need to be stored together in groups which affects availability.</li>
+            <li>Waitlist times could be a year long or more.</li>
+            <li>New transfers need to go through an approval process to be stored.</li>
+          </ol>
+        </div>
+
+        <h2 class="story__act">Client Waitlist Experience</h2>
+
+        <figure class="story-figure">
+          <img src="images/rms-waitlist-warning-icon.png" alt="The client's box list with a warning icon next to 'Largest Available Area: 7', flagging when a transfer hits or exceeds the size that fits.">
+          <figcaption>A warning icon appears when a transfer grows past the largest available space.</figcaption>
+        </figure>
+
+        <figure class="story-figure">
+          <img src="images/rms-waitlist-warning.png" alt="A warning modal: adding another box will place the transfer on a waiting list; the client can split boxes across two transfers or wait for a large enough space.">
+          <figcaption>The warning explains what happens next &mdash; split the transfer, or wait for space.</figcaption>
+        </figure>
+
+        <h2 class="story__act">Admin Experience</h2>
+
+        <figure class="story-figure">
+          <img src="images/rms-admin-waitlist.png" alt="The admin view with 'Unapproved' and 'Approved' tables of storage requests (title, transfer number, owner, date requested, number of boxes, record type). Admins can pre-approve waitlisted transfers; once approved they join a traditional waitlist.">
+          <figcaption>Admins pre-approve waitlisted transfers; approved ones move to a traditional waitlist.</figcaption>
+        </figure>
+
+        <h2 class="story__act">Ch 3: Bonus Solve</h2>
+
+        <div class="beat">
+          <p>During the discovery period I noticed that the decommission page had a poor hierarchy and was difficult to use.</p>
+        </div>
+
+        <div class="beat">
+          <p>Our clients were spending the most amount of time dealing with dispositioning, but the process was not addressed in client brief.</p>
+        </div>
+
+        <div class="beat">
+          <p>The original designers didn&rsquo;t realize how many transfers would be waiting to be decommissioned at one time. So the page was a gigantic list. A user would scroll, and wait for it to load&hellip; and scroll again, and wait for it to load&hellip; scroll again and wait for it to load&hellip; and do it three more times.</p>
+        </div>
+
+        <div class="beat">
+          <p>Our client often needed to locate specific transfers and communicate with their clients about decommissioning. RMS did not have a search within the dispositions page. This was a third of our client&rsquo;s job.</p>
+        </div>
+
+        <div class="beat">
+          <p>But our time was up.</p>
+        </div>
+
+        <div class="beat">
+          <p>I fought for the client to get a search on the page.</p>
+        </div>
+
+        <div class="beat">
+          <p>We added it as a last minute addition</p>
+        </div>
+
+        <div class="beat">
+          <p>And they were eternally grateful.</p>
+        </div>
+
+        <figure class="story-figure">
+          <div class="project-media">Image placeholder</div>
+          <figcaption>The bonus solve &mdash; mapping the decommission flow (SVG flowchart).</figcaption>
+        </figure>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/figures.js"></script>
+</body>
+</html>

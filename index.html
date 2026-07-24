@@ -9,14 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tokens.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
-      <a href="index.html" class="nav__brand">Aaron</a>
+      <a href="index.html" class="nav__brand">
+        <img src="images/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
 
       <div class="nav__links">
         <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
@@ -37,62 +40,75 @@
   </header>
 
   <main>
-    <section class="hero container">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Selected work</h1>
-      <p class="lead">A collection of projects I've built. Replace this line with a sentence or two about the kind of work you do and what you're looking for.</p>
+    <section class="container home-hero">
+      <img class="home-hero__banner" src="images/dominos-hero.svg" alt="A line of dominoes, the leftmost ones mid-fall — momentum in motion.">
+      <div class="home-hero__text">
+        <h1 class="home-hero__title">Momentum, by design</h1>
+        <p class="lead">A collection of projects I've built. Replace this line with a sentence or two about the kind of work you do and what you're looking for.</p>
+      </div>
     </section>
 
     <section class="container">
+      <h2 class="projects-heading">Projects</h2>
       <div class="grid grid--cards">
 
-        <article class="card">
-          <div class="card__media">Project image</div>
-          <div class="card__body">
-            <h3 class="card__title">Project Title One</h3>
-            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+        <a class="card" href="building-compliance.html">
+          <div class="card__media">
+            <img src="images/building-compliance-thumbnail.png" alt="A board of design-system card components on a teal background.">
           </div>
-        </article>
+          <div class="card__body">
+            <h3 class="card__title">Building Compliance</h3>
+            <p class="card__desc">Consolidated a four-generations-deep design-system landscape into a single tokenized system — reaching 90%+ team-wide compliance in two months.</p>
+          </div>
+        </a>
 
-        <article class="card">
-          <div class="card__media">Project image</div>
-          <div class="card__body">
-            <h3 class="card__title">Project Title Two</h3>
-            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+        <a class="card" href="community-organization.html">
+          <div class="card__media">
+            <img src="images/community-organization-thumbnail.png" alt="A cluster of green, teal, and blue dots grouped together.">
           </div>
-        </article>
+          <div class="card__body">
+            <h3 class="card__title">Community Organization</h3>
+            <p class="card__desc">Restructured the community experience to make interactions more intentional — less endless scroll, more time spent where it mattered.</p>
+          </div>
+        </a>
 
-        <article class="card">
-          <div class="card__media">Project image</div>
-          <div class="card__body">
-            <h3 class="card__title">Project Title Three</h3>
-            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+        <a class="card" href="community-ownership.html">
+          <div class="card__media">
+            <img src="images/community-ownership.svg" alt="Illustration of a seedling growing from soil.">
           </div>
-        </article>
+          <div class="card__body">
+            <h3 class="card__title">Community Ownership</h3>
+            <p class="card__desc">Designed for user ownership to drive a sustained lift in how people posted, read, and commented.</p>
+          </div>
+        </a>
 
-        <article class="card">
+        <a class="card" href="community-depth.html">
           <div class="card__media">Project image</div>
           <div class="card__body">
-            <h3 class="card__title">Project Title Four</h3>
-            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+            <h3 class="card__title">Community Depth</h3>
+            <p class="card__desc">Redesigned posting and moderation to make room for more reflective, experience-based self-expression.</p>
           </div>
-        </article>
+        </a>
 
-        <article class="card">
-          <div class="card__media">Project image</div>
-          <div class="card__body">
-            <h3 class="card__title">Project Title Five</h3>
-            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+        <a class="card" href="unitely.html">
+          <div class="card__media card__media--unitely">
+            <img src="images/unitely-logo.png" alt="Unite.ly logo">
           </div>
-        </article>
+          <div class="card__body">
+            <h3 class="card__title">Unite.ly</h3>
+            <p class="card__desc">Increasing community engagement for Unite.ly — from a homepage redesign to rethinking how notifications work on mobile.</p>
+          </div>
+        </a>
 
-        <article class="card">
-          <div class="card__media">Project image</div>
-          <div class="card__body">
-            <h3 class="card__title">Project Title Six</h3>
-            <p class="card__desc">One or two sentences describing what this project is, the problem it solves, and the tools you used to build it.</p>
+        <a class="card" href="rms.html">
+          <div class="card__media">
+            <img src="images/rms-thumbnail.svg" alt="RMS — a records/document icon with the RMS wordmark.">
           </div>
-        </article>
+          <div class="card__body">
+            <h3 class="card__title">RMS</h3>
+            <p class="card__desc">A records management system for long-term physical storage — creating warehouse space, designing a smarter waitlist, and fixing a painful decommission flow.</p>
+          </div>
+        </a>
 
       </div>
     </section>
