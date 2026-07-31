@@ -70,39 +70,57 @@
     <article class="container">
       <div class="story">
 
-        <h2 class="story__act">Problem</h2>
+        <h2 class="story__act">One feed, everything weighted the same</h2>
 
         <div class="beat">
-          <p>Lore launched with a single reverse-chronological feed. Open the app and you’d scroll past a sleep-tips post, then a one-word reflection on peace, then a video about making friends, then a story about an ice bath — all with equal weight, in whatever order they’d been posted.</p>
+          <p>Open Lore and you&rsquo;d scroll past a sleep-tips post, then a one-word reflection on peace, then a video about making friends, then a story about an ice bath &mdash; all equal, in whatever order they&rsquo;d been posted.</p>
         </div>
 
         <div class="beat">
-          <p>That’s fine when the goal is keeping people scrolling. It’s the wrong model when the goal is helping someone feel less alone in something specific. A user struggling with sleep had no way to find the other people talking about sleep. They could see that people were reflecting, but not where their reflection belonged.</p>
+          <p>That&rsquo;s fine when the goal is keeping people scrolling. It&rsquo;s the wrong model when the goal is helping someone feel less alone in something specific. Someone struggling with sleep had no way to find the other people talking about sleep.</p>
+        </div>
+
+        <div class="beat">
+          <p>They could see that people were reflecting, but not where their reflection belonged.</p>
+        </div>
+
+        <div class="beat">
+          <p>New users felt it hardest: land on a feed of strangers&rsquo; unrelated posts, find nothing that speaks to you, leave.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/community-organization-old.png" alt="The original single reverse-chronological feed, annotated: an app-wide widget, some wasted white space, an edit indicator that caused confusion, and an article by Lore.">
-          <figcaption>The original feed &mdash; one reverse-chronological stream with everything weighted equally.</figcaption>
+          <figcaption>The original feed &mdash; one reverse-chronological stream, everything weighted equally.</figcaption>
         </figure>
 
+        <h2 class="story__act">Ranking had already been tried</h2>
+
         <div class="beat">
-          <p>New users felt this hardest — they’d land on a feed of strangers’ unrelated posts, find nothing that spoke to them, and leave.</p>
+          <p>Before I joined the squad, the team had gone at this with ranking &mdash; and run into a wall. Ranking needs volume and context to work, and Lore had neither yet. They&rsquo;d shelved it and shipped autolinking instead.</p>
         </div>
 
-        <h2 class="story__act">Hypothesis</h2>
+        <h2 class="story__act">Autolinking worked &mdash; if you found a post first</h2>
 
         <div class="beat">
-          <p>We could have improved ranking. But better ranking still optimizes for what to show next, not for helping someone find where they fit — and belonging was the actual mission.</p>
+          <p>Each post got a couple of auto-generated hashtags, tappable through search to reach related posts. A good concept with two problems: the tagging was inconsistent, and it was post-first. You had to stumble onto something that resonated before you could branch out from it. And the tags were specific enough that users often disagreed with them.</p>
         </div>
 
         <div class="beat">
-          <p>Therefore we asked a narrower question: could we help people find relevance — a topic, a recurring set of voices, a place — before we tried to help them find content.</p>
+          <p>There was still no answer to the two questions underneath all of this: where do I belong here, and what is this community even about?</p>
         </div>
 
-        <h2 class="story__act">Intervention</h2>
+        <h2 class="story__act">Hubs: lift the tag off the post</h2>
 
         <div class="beat">
-          <p>We built organic hubs on top of existing autolinking. As posts were written, the system auto-tagged them against topics like #Meditation, #Breathing, #Overwhelm — no manual categorizing required. A post could carry more than one tag and route into more than one hub, so a meditation post that touched on anxiety could surface in both places.</p>
+          <p>So we stopped treating the tag as a label on a post and started treating it as a place.</p>
+        </div>
+
+        <div class="beat">
+          <p>Hubs abstracted those post-level hashtags up a level &mdash; broad enough to hold a real conversation, and created only once there was enough content to sustain one. Not &ldquo;Finding Strength in Meditation,&rdquo; but <em>Finding Strength</em> and <em>Meditation</em>, each standing on its own. A post could route into more than one.</p>
+        </div>
+
+        <div class="beat">
+          <p>Autolinking made you find a post to find a place. Hubs made the place the starting point.</p>
         </div>
 
         <figure class="story-figure">
@@ -110,35 +128,55 @@
           <figcaption>Organic hubs &mdash; auto-tagged posts route into one or more topic hubs.</figcaption>
         </figure>
 
+        <h2 class="story__act">Discord&rsquo;s model, without Discord&rsquo;s backend</h2>
+
         <div class="beat">
-          <p>Hubs weren’t groups you joined. They were lenses onto the same content — letting someone filter “Finding Strength in Meditation” out of the general stream and into a thread with people circling the same thing.</p>
+          <p>We took the shape from Discord: named places you drop into, each with its own ongoing conversation. What we couldn&rsquo;t take was posting into one. Channel-scoped composition meant rebuilding how posts were created and stored, and that wasn&rsquo;t a fight worth having yet.</p>
         </div>
 
-        <h2 class="story__act">What worked</h2>
+        <div class="beat">
+          <p>So hubs stayed read-only lenses. You wrote a post the way you always had, and the backend routed it into whatever hubs fit &mdash; which it was already good enough to do. Users got somewhere to go without us rebuilding the system underneath them.</p>
+        </div>
+
+        <h2 class="story__act">Five to start, then personalized</h2>
 
         <div class="beat">
-          <p>Super users adopted hubs almost immediately. They used the tag filters to track recurring topics, recognize familiar names, and reply with intention instead of posting into the void. The underlying theory held: given a way to find context, people reciprocated.</p>
+          <p>Every user got five hubs out of the gate, which shifted with their engagement over time. Five is enough to signal what the community is about without asking anyone to pick from a wall of options.</p>
+        </div>
+
+        <div class="beat">
+          <p>That was the real unlock: direction. Somewhere to go, and a decision to make about where.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/community-organization-new.png" alt="The redesigned home screen with hub filter tabs (All, #Meditation, #Breathing, #Overwhelm), annotated: new hubs, larger content allowed and encouraged, and an updated-post indicator.">
-          <figcaption>The redesigned home &mdash; hub filters across the top, longer posts, and an update indicator.</figcaption>
+          <figcaption>The redesigned home &mdash; hub filters across the top, longer posts, update indicator.</figcaption>
         </figure>
 
-        <h2 class="story__act">What didn’t</h2>
+        <h2 class="story__act">Super users adopted it immediately</h2>
 
         <div class="beat">
-          <p>It didn’t reach the users who needed it most. A new or quiet user still had to know a hub existed, know to tap into it, and post with no signal anyone would respond. Discovery still rewarded people who were already active and confident — the same users who didn’t need help finding belonging in the first place.</p>
+          <p>They used hub filters to track recurring topics, recognize familiar names, and reply with intention instead of posting into the void. The underlying theory held: given a way to find context, people reciprocated.</p>
+        </div>
+
+        <h2 class="story__act">It missed the people who needed it most</h2>
+
+        <div class="beat">
+          <p>Reading became place-based. Writing didn&rsquo;t. A quiet user could drop into a hub, find the exact conversation they&rsquo;d been looking for &mdash; and then still have to post into the general stream and hope it landed back where they&rsquo;d found it.</p>
         </div>
 
         <div class="beat">
-          <p>Autolinking solved where content goes. It did nothing for who shows up.</p>
+          <p>Super users could hold that gap in their heads. New users couldn&rsquo;t. Discovery still rewarded people who were already active and confident &mdash; the same users who didn&rsquo;t need help finding belonging.</p>
         </div>
 
-        <h2 class="story__act">Learning</h2>
+        <div class="beat">
+          <p>Hubs organized where content goes. They did nothing for who shows up.</p>
+        </div>
+
+        <h2 class="story__act">Categorization organizes. It doesn&rsquo;t onboard.</h2>
 
         <div class="beat">
-          <p>Categorization is an organizing tool, not an onboarding tool. Hubs gave structure to conversations that already had momentum, but structure alone can’t create someone’s first reason to speak. That gap — the cold start, the blank-page moment — needed a different kind of intervention, which is where the next round of experiments picked up.</p>
+          <p>Hubs gave structure to conversations that already had momentum, but structure can&rsquo;t create someone&rsquo;s first reason to speak. The cold start &mdash; the blank-page moment &mdash; needed a different intervention. That&rsquo;s where the next round of experiments picked up.</p>
         </div>
 
       </div>
