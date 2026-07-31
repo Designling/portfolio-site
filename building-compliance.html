@@ -163,6 +163,11 @@
           <p>Some files had six or more legacy libraries attached, tangled together with no clear order of what was current. Manual review and a dev-side crawler bot grading squads on compliance confirmed it was happening everywhere.</p>
         </div>
 
+        <figure class="story-figure">
+          <img src="images/setback.png" alt="Diagram: design files now drawing from both the New Library and the old Base Library, with several files flagged — contamination creeping back in.">
+          <figcaption>Files pulling from both the new and old libraries &mdash; several flagged.</figcaption>
+        </figure>
+
         <div class="beat">
           <p>I tried un-componentizing the worst offenders. The child links held. Old styles kept riding along, and error risk kept climbing.</p>
         </div>
@@ -170,11 +175,6 @@
         <div class="beat">
           <p>Deleting the old libraries outright was on the table &mdash; but the org wasn&rsquo;t ready to absorb that risk.</p>
         </div>
-
-        <figure class="story-figure">
-          <img src="images/setback.png" alt="Diagram: design files now drawing from both the New Library and the old Base Library, with several files flagged — contamination creeping back in.">
-          <figcaption>Files pulling from both the new and old libraries &mdash; several flagged.</figcaption>
-        </figure>
 
         <h2 class="story__act">I turned every legacy style neon red</h2>
 
