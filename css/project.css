@@ -455,3 +455,17 @@ html { scroll-behavior: smooth; }
   margin-top: var(--space-7);
   text-align: center;
 }
+
+/* ==========================================================================
+   TYPOGRAPHIC POLISH — reduce widows/orphans in the case-study copy
+   Balance the section titles so they never leave one word on a line; use
+   pretty wrapping on body copy so paragraphs don't end on a lone short word.
+   ========================================================================== */
+.story__act,
+.project-section__title { text-wrap: balance; }
+
+.beat p,
+.project-overview__summary,
+.prose p,
+.story-read p,
+.story-figure figcaption { text-wrap: pretty; }

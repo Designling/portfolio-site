@@ -41,24 +41,28 @@ h1 {
   font-size: var(--text-3xl);
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
+  text-wrap: balance;
 }
 
 h2 {
   font-size: var(--text-2xl);
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
+  text-wrap: balance;
 }
 
 h3 {
   font-size: var(--text-xl);
   font-weight: var(--font-semibold);
   line-height: var(--leading-tight);
+  text-wrap: balance;
 }
 
 .lead {
   font-size: var(--text-lg);
   color: var(--color-text-muted);
   line-height: var(--leading-relaxed);
+  text-wrap: pretty;
 }
 
 .eyebrow {
@@ -68,6 +72,12 @@ h3 {
   text-transform: uppercase;
   color: var(--color-accent);
 }
+
+/* Reduce widows/orphans: balance short headings, avoid short last lines. */
+.home-hero__title,
+.card__title { text-wrap: balance; }
+
+.card__desc { text-wrap: pretty; }
 
 /* ==========================================================================
    LAYOUT / CONTAINER
