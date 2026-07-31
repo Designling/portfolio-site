@@ -79,69 +79,71 @@
     <article class="container">
       <div class="story">
 
-        <h2 class="story__act">Problem</h2>
+        <h2 class="story__act">The app was turning into a patchwork</h2>
 
         <div class="beat">
-          <p>Lore is a startup that runs on speed — squads ship one-off flows constantly, nothing is built to last long.</p>
+          <p>Lore runs on speed. Squads ship one-off flows constantly, and nothing is built to last. Small inconsistencies crept in, and the product started looking unprofessional.</p>
+        </div>
+
+        <h2 class="story__act">A component library would have made it worse</h2>
+
+        <div class="beat">
+          <p>The org brought in a design systems engineer, and he leaned toward a pure component-based library &mdash; the standard playbook.</p>
         </div>
 
         <div class="beat">
-          <p>The app was starting to feel less like one cohesive product and more like a patchwork — small inconsistencies were creeping in, and it was starting to look unprofessional. We ran a few design meetings trying to name the problem.</p>
+          <p>I pushed back. Designers can&rsquo;t modify components, so every variation means a new one. Across a team of 8, that library balloons fast, and each new component is another thing to maintain. We needed flexibility without chaos.</p>
         </div>
 
-        <h2 class="story__act">Decision</h2>
+        <h2 class="story__act">Tokens: change one thing, everything follows</h2>
 
         <div class="beat">
-          <p>The org brought in a design systems engineer — and he was leaning toward a pure component-based library, the standard playbook.</p>
+          <p>Color, spacing, shadow &mdash; all of it pulled from one source, so every instance updates together.</p>
         </div>
 
         <div class="beat">
-          <p>I argued a pure component library would backfire: designers can’t modify components, so any variation means building a new one — and across a team of 8, that library balloons fast, each new component another thing to maintain. We needed flexibility without chaos.</p>
-        </div>
-
-        <figure class="story-figure">
-          <img src="images/building-compliance-fork-2.png" alt="Figma card component: a simpler card variant with a media placeholder, 16px padding, and a Surface/Card fill.">
-        </figure>
-
-        <h2 class="story__act">Solution</h2>
-
-        <div class="beat">
-          <p>My answer: tokens. Change one token, and every instance built on it updates with it — color, spacing, shadow, all of it. Cards could look completely different from each other and still stay consistent underneath, because they all pulled from the same source.</p>
+          <p>Cards could look completely different from each other and still stay consistent underneath.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/base-components.png" alt="A Figma board of base card components — several card variants that look different from one another but are all built from the same tokenized foundation.">
-          <figcaption>The base card components — variations that look different from each other but stay consistent underneath, because they all pull from the same tokens.</figcaption>
+          <figcaption>Base card components &mdash; variants that look different from each other but share one tokenized foundation.</figcaption>
         </figure>
 
-        <h2 class="story__act">Blind Spot</h2>
+        <h2 class="story__act">I built it as an island</h2>
 
         <div class="beat">
-          <p>I built the new system in a brand-new library instead of extending the old one’s lineage. It worked in isolation — but I’d unknowingly repeated the exact mistake every systems designer before me had made: build something powerful, then expect the whole team to just commit to it. A system nobody could adopt without breaking their workflow wasn’t the system. It was still just my system.</p>
+          <p>Instead of extending the old library&rsquo;s lineage, I started a brand-new one. It worked beautifully &mdash; for me. Designers couldn&rsquo;t adopt it without breaking active workflows mid-project.</p>
+        </div>
+
+        <div class="beat">
+          <p>Which meant I&rsquo;d repeated the exact mistake every systems designer before me had made: build something powerful, then expect the team to commit to it.</p>
+        </div>
+
+        <div class="beat">
+          <p>A system nobody could adopt without breaking their workflow wasn&rsquo;t the system. It was still just my system.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/blind-spot.png" alt="Diagram: every design file still connects to the old Base Library, while the New Library sits off on its own with nothing linked to it — an island.">
-          <figcaption>Every designer’s file still connected to the old base library — while the new library sat off on its own, an island.</figcaption>
+          <figcaption>Every design file still connects to the old base library. The new library sits off on its own, nothing linked to it.</figcaption>
         </figure>
 
+        <h2 class="story__act">I rebuilt the whole app in a week</h2>
+
         <div class="beat">
-          <p>Designers couldn’t adopt it without breaking active workflows mid-project.</p>
+          <p>Every screen, inside the new library &mdash; one &ldquo;prime document&rdquo; designers could copy from and land near wherever they&rsquo;d left off. Adoption stopped requiring anyone to start over.</p>
         </div>
 
-        <h2 class="story__act">Implementation</h2>
+        <h2 class="story__act">Adoption climbed, then stalled</h2>
 
         <div class="beat">
-          <p>In one week, I rebuilt the entire app in Figma inside the new library — a single “prime document” every designer could copy from and land near wherever they’d left off.</p>
-        </div>
-
-        <div class="beat">
-          <p>Compliance rose. The squad liked working in the new system.</p>
+          <p>The squad liked working in the new system, but compliance flattened short of where it needed to be. Something was still leaking designers back to old habits.</p>
         </div>
 
         <figure class="story-figure">
           <div class="chart-panel">
-            <svg viewBox="0 0 620 340" role="img" aria-label="Bar chart: team compliance rising across five measures, then leveling off short of the goal line." style="width:100%;height:auto;display:block">
+            <svg viewBox="0 0 620 340" role="img" aria-label="Bar chart: team compliance rising, then leveling off short of the goal line." style="width:100%;height:auto;display:block">
               <!-- goal line -->
               <line x1="50" y1="70" x2="590" y2="70" style="stroke:var(--color-text-muted)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.7"/>
               <text x="586" y="60" text-anchor="end" style="fill:var(--color-text-muted)" font-size="16" font-family="Inter, sans-serif">Goal</text>
@@ -152,59 +154,47 @@
               <rect x="345" y="105" width="90" height="180" rx="6" style="fill:var(--color-accent)"/>
             </svg>
           </div>
-          <figcaption>Compliance climbing as the squad moved into the new system.</figcaption>
+          <figcaption>Compliance climbing, then flattening short of the goal.</figcaption>
         </figure>
 
+        <h2 class="story__act">Old libraries were leaking back in</h2>
+
         <div class="beat">
-          <p>It plateaued short of where it needed to be — something was still leaking designers back to old habits.</p>
+          <p>Some files had six or more legacy libraries attached, tangled together with no clear order of what was current. Manual review and a dev-side crawler bot grading squads on compliance confirmed it was happening everywhere.</p>
         </div>
 
-        <h2 class="story__act">Setback</h2>
+        <div class="beat">
+          <p>I tried un-componentizing the worst offenders. The child links held. Old styles kept riding along, and error risk kept climbing.</p>
+        </div>
 
         <div class="beat">
-          <p>I kept finding old color styles showing up in files — some with six or more legacy libraries attached, all tangled together with no clear order of what was current. Manual design review and a dev-side crawler bot — grading squads on compliance — confirmed it was happening across squads.</p>
+          <p>Deleting the old libraries outright was on the table &mdash; but the org wasn&rsquo;t ready to absorb that risk.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/setback.png" alt="Diagram: design files now drawing from both the New Library and the old Base Library, with several files flagged — contamination creeping back in.">
-          <figcaption>Design files were pulling from both the new library and the old base library — old styles riding back in across squads.</figcaption>
+          <figcaption>Files pulling from both the new and old libraries &mdash; several flagged.</figcaption>
         </figure>
 
+        <h2 class="story__act">I turned every legacy style neon red</h2>
+
         <div class="beat">
-          <p>Contamination crept back across the system.</p>
+          <p>Then republished the libraries, so the contamination showed up in everyone&rsquo;s files at once. Designers spotted the red instantly. Use of the old libraries plummeted.</p>
         </div>
 
         <div class="beat">
-          <p>I un-componentized the master components in the library with the worst accidental usage, expecting that to sever the link to the old library.</p>
-        </div>
-
-        <div class="beat">
-          <p>Un-componentizing didn’t break the child links — old color styles were still riding along, and error risk kept climbing.</p>
-        </div>
-
-        <div class="beat">
-          <p>Deleting the old libraries outright was on the table — but the org wasn’t ready to absorb that risk.</p>
-        </div>
-
-        <h2 class="story__act">Cleanup</h2>
-
-        <div class="beat">
-          <p>Designers needed to <em>see</em> contamination, not just be told about it — so I recolored every old color style and component neon red and republished the libraries.</p>
+          <p>Designers needed to <em>see</em> contamination, not just be told about it.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/catching-errors.png" alt="The components board with every old color style and component recolored to a jarring bright pink, flagging old-library usage at a glance.">
-          <figcaption>Every old color style and component recolored to a jarring flag color — contamination you could spot instantly.</figcaption>
+          <figcaption>Every legacy style recolored to a jarring flag color.</figcaption>
         </figure>
 
-        <div class="beat">
-          <p>Designers spotted the red instantly. Use of the old libraries plummeted.</p>
-        </div>
-
-        <h2 class="story__act">Payoff</h2>
+        <h2 class="story__act">7 libraries deleted, 90%+ compliance, zero disruption</h2>
 
         <div class="beat">
-          <p>Three weeks later, I deleted 7 legacy libraries with zero business disruption — pulling the org over 90% compliance into a single tokenized system.</p>
+          <p>Three weeks after the red went live, the old system came out with nothing breaking behind it. One tokenized library, across the whole org.</p>
         </div>
 
         <figure class="story-figure">
