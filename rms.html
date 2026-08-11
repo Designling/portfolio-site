@@ -70,156 +70,163 @@
     <article class="container">
       <div class="story">
 
-        <h2 class="story__act">Context</h2>
+        <h2 class="story__act">Problem</h2>
 
         <div class="beat">
-          <p>RMS manages the long term storage of transfers (groups of physical boxes). It allows people to submit transfers, check stored things out, and eventually decommission them.</p>
+          <p>RMS manages the long-term storage of transfers &mdash; groups of physical boxes. People submit transfers, check stored ones out, and eventually decommission them.</p>
         </div>
 
         <div class="beat">
-          <p>The system worked well for a while, but over time as transfers were decommissioned and new transfers were added, the system gained empty spaces that could only fit small transfers. So when large transfers did come in, the RMS program was unable to handle them.</p>
-        </div>
-
-        <h2 class="story__act">Methodology</h2>
-
-        <div class="beat">
-          <p>I used human centered design tools to develop these solutions and went through several iterations working directly with the client and developers.</p>
-        </div>
-
-        <h2 class="story__act">Case</h2>
-
-        <div class="beat">
-          <p>Centeva was asked to create:</p>
-          <ol>
-            <li>A way to move transfers within the warehouse.</li>
-            <li>A waitlisting system to improve warehouse efficiency and storage capacity.</li>
-          </ol>
-        </div>
-
-        <h2 class="story__act">Ch 1: Moving Transfers</h2>
-
-        <div class="beat">
-          <p>The challenge was to create space in a massive warehouse. So I thought of automation. The system knew where space was and just needed the power to create larger spaces.</p>
+          <p>The system worked well until it had been running for a while. Every decommission left a gap, and new transfers rarely fit the gaps exactly. Over time the warehouse filled with empty spaces that could only hold small transfers &mdash; and when a large transfer arrived, RMS had nowhere to put it. Large transfers were the reason this project existed.</p>
         </div>
 
         <div class="beat">
-          <p>Clients loved it, but due to development constraints we decided against it.</p>
+          <p>Centeva was asked to build two things: a way to move transfers within the warehouse, and a waitlist to improve storage capacity and efficiency. I worked through several iterations of both, directly with the client and the development team. The screens that follow are the working wireframes.</p>
+        </div>
+
+        <h2 class="story__act">Making Room</h2>
+
+        <div class="beat">
+          <p>Two constraints sat over this whole chapter: our team was building inside a system that was new to us, and the turnaround was tight &mdash; past the deadline, the work stopped paying for itself.</p>
+        </div>
+
+        <div class="beat">
+          <p>The warehouse is massive, but the system already knew where every empty space was. So my first idea was automation: tell the system how much space you need, and let it work out the moves to create it.</p>
         </div>
 
         <figure class="story-figure">
-          <img src="images/rms-iteration-1.png" alt="Iteration 1 — automation. A form asking for the space needed, with an 'Allow Secondary Moves' option and a Find button.">
+          <img src="images/rms-iteration-1.png" alt="Iteration 1 — automation. A wireframe form asking for the space needed, with an 'Allow Secondary Moves' option and a Find button.">
           <figcaption>First idea: automation. Enter the space needed and let the system make room.</figcaption>
         </figure>
 
-        <figure class="story-figure">
-          <img src="images/rms-iteration-2.png" alt="The system reports 'Space Found: 50' and 'Number of moves: 13', listing each box move (for example, 4 boxes from A234 to B403).">
-          <figcaption>The system works out the moves needed to open up space &mdash; but development constraints ruled it out.</figcaption>
-        </figure>
-
         <div class="beat">
-          <p>So I simplified the automation so the system could identify areas that would fit a selected transfer.</p>
+          <p>It never left the building. The dev team&rsquo;s verdict was simple: that&rsquo;s a lot of math. No go.</p>
         </div>
 
         <div class="beat">
-          <p>Clients loved it again, but when we started building it, development ran into roadblocks and we moved away from the idea.</p>
+          <p>So I simplified the automation into something we could share with the client: pick a transfer, and the system lists every place it could go.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/rms-iteration-3.png" alt="A selected transfer (Dark Saber 234, 15 boxes) with its current location and a sortable list of possible locations to move it to.">
-          <figcaption>Simplified: pick a transfer and see the areas that would fit it. Loved again &mdash; until development hit roadblocks.</figcaption>
+          <figcaption>Simplified: pick a transfer and see everywhere it could go.</figcaption>
         </figure>
 
         <div class="beat">
-          <p>So, I started playing with drag and drop options. How could I use drag and drop functionality in such a large warehouse?</p>
+          <p>The client passed. On paper, their ask had only ever been the ability to move transfers within the warehouse &mdash; but what they actually wanted was to create larger spaces, and a destination list for one transfer at a time didn&rsquo;t get them there. It answered where a transfer could go without ever showing them the warehouse itself.</p>
         </div>
 
         <div class="beat">
-          <p>When I showed the designs to our development team, they loved it, but when I showed designs to the client they struggled to use it.</p>
+          <p>So round three went the other direction &mdash; fully manual. Drag and drop, in a warehouse this large.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/rms-iteration-4-1.png" alt="A warehouse grid showing two areas (Row A and Row C) with up and down navigation between them and a receipt panel; users drag and drop transfers between areas.">
-          <figcaption>Free reign to move transfers anywhere in the warehouse. The dev team loved it &mdash; but clients struggled to use it.</figcaption>
+          <figcaption>Free rein to move transfers anywhere in the warehouse.</figcaption>
         </figure>
 
         <div class="beat">
-          <p>So I made navigation more fluid and created a holding area for transfers.</p>
+          <p>The first version was rough &mdash; when I put it in front of the client, they struggled to use it. So I made navigation between warehouse areas more fluid and added a holding area: pick a transfer up anywhere, set it down anywhere, and you can&rsquo;t save until the holding area is clear. Nothing gets lost mid-move.</p>
         </div>
 
         <figure class="story-figure">
-          <img src="images/rms-iteration-4.png" alt="A warehouse grid with a holding area at the top and rows below; users have free reign to move a transfer anywhere and can't save until the holding area is clear.">
+          <img src="images/rms-iteration-4.png" alt="A warehouse grid with a holding area at the top and rows below; users have free rein to move a transfer anywhere and can't save until the holding area is clear.">
           <figcaption>More fluid navigation &mdash; moving between areas of the warehouse to place a transfer.</figcaption>
         </figure>
 
-        <h2 class="story__act">Chosen Solution</h2>
+        <div class="beat">
+          <p>The chosen solution kept the holding area and rounded it out: search by transfer number, at-a-glance stats &mdash; largest space, open space, boxes in storage &mdash; and a running log of every move.</p>
+        </div>
 
         <figure class="story-figure">
           <img src="images/rms-chosen-solution.png" alt="The chosen solution — a warehouse view with a holding area, search by transfer number, largest-space / open-space / boxes-in-storage stats, pagination, and a log of moved transfers.">
           <figcaption>The chosen solution: a holding area, search, easy navigation, and a running log of every move.</figcaption>
         </figure>
 
-        <h2 class="story__act">Ch 2: The Waitlist</h2>
+        <div class="beat">
+          <p>There&rsquo;s an irony here: after the automation ideas fell away, the UI that won was itself a heavy dev lift. But this one the client loved &mdash; and when we built it, it landed. For the first time they could see the whole warehouse and optimize it on their own terms: their moves, their judgment about what to ask of the warehouse floor, recoverable at every step.</p>
+        </div>
+
+        <h2 class="story__act">A Waitlist That Isn&rsquo;t Just a Line</h2>
 
         <div class="beat">
-          <p>During the product discovery period, I found some problems with using a traditional waitlist.</p>
+          <p>The second ask was the waitlist, and discovery reframed it. Three realities shaped how this one had to work:</p>
           <ol>
-            <li>Boxes need to be stored together in groups which affects availability.</li>
-            <li>Waitlist times could be a year long or more.</li>
-            <li>New transfers need to go through an approval process to be stored.</li>
+            <li>Boxes have to be stored together as a group, so &ldquo;available space&rdquo; depends on the shape of what&rsquo;s arriving.</li>
+            <li>Smaller transfers were inadvertently prioritized because they were easier to accommodate &mdash; which meant large transfers could wait years.</li>
+            <li>Every new transfer needed approval before it could be stored &mdash; but approval only came once it reached the top of the waitlist.</li>
           </ol>
         </div>
 
-        <h2 class="story__act">Client Waitlist Experience</h2>
+        <div class="beat">
+          <p>The sharpest problem, though, was the first minute &mdash; not the years. Clients had no way of knowing a transfer would be waitlisted before they submitted it. They found out after, and it was generating customer care calls.</p>
+        </div>
+
+        <div class="beat">
+          <p>So my first move was to make the constraint visible before submission &mdash; turn the waitlist from a surprise into a limiting factor users could see coming. A warning icon appears the moment a transfer grows past the largest available space.</p>
+        </div>
 
         <figure class="story-figure">
           <img src="images/rms-waitlist-warning-icon.png" alt="The client's box list with a warning icon next to 'Largest Available Area: 7', flagging when a transfer hits or exceeds the size that fits.">
           <figcaption>A warning icon appears when a transfer grows past the largest available space.</figcaption>
         </figure>
 
+        <div class="beat">
+          <p>The warning lays out the choice plainly: split the boxes across two transfers, or wait for a large enough space to open. Either way, nobody lands on the waitlist without having decided to.</p>
+        </div>
+
         <figure class="story-figure">
           <img src="images/rms-waitlist-warning.png" alt="A warning modal: adding another box will place the transfer on a waiting list; the client can split boxes across two transfers or wait for a large enough space.">
           <figcaption>The warning explains what happens next &mdash; split the transfer, or wait for space.</figcaption>
         </figure>
 
-        <h2 class="story__act">Admin Experience</h2>
+        <div class="beat">
+          <p>Then I went looking for what else the wait was hiding. Through interviews and mapping the experience end to end, one weak point stood out: because approval only happened at the top of the list, a transfer could wait a year or more &mdash; and then be rejected.</p>
+        </div>
+
+        <div class="beat">
+          <p>The fix was to move approval inside the wait. Admins pre-approve transfers while they sit on the waitlist, so by the time space opens up, the answer is already yes.</p>
+        </div>
 
         <figure class="story-figure">
           <img src="images/rms-admin-waitlist.png" alt="The admin view with 'Unapproved' and 'Approved' tables of storage requests (title, transfer number, owner, date requested, number of boxes, record type). Admins can pre-approve waitlisted transfers; once approved they join a traditional waitlist.">
           <figcaption>Admins pre-approve waitlisted transfers; approved ones move to a traditional waitlist.</figcaption>
         </figure>
 
-        <h2 class="story__act">Ch 3: Bonus Solve</h2>
+        <div class="beat">
+          <p>We built this one too, and the client was happy with it. Waitlisting stopped being something that happened to people and became something they chose with eyes open &mdash; and the wait itself started doing useful work.</p>
+        </div>
+
+        <h2 class="story__act">The Fight for Search</h2>
 
         <div class="beat">
-          <p>During the discovery period I noticed that the decommission page had a poor hierarchy and was difficult to use.</p>
+          <p>During discovery I kept noticing the decommission page. Poor hierarchy, difficult to use &mdash; and nowhere in the client brief.</p>
         </div>
 
         <div class="beat">
-          <p>Our clients were spending the most amount of time dealing with dispositioning, but the process was not addressed in client brief.</p>
+          <p>It should have been. Dispositioning was where our clients spent the most time &mdash; a third of the job.</p>
         </div>
 
         <div class="beat">
-          <p>The original designers didn&rsquo;t realize how many transfers would be waiting to be decommissioned at one time. So the page was a gigantic list. A user would scroll, and wait for it to load&hellip; and scroll again, and wait for it to load&hellip; scroll again and wait for it to load&hellip; and do it three more times.</p>
+          <p>The original designers hadn&rsquo;t anticipated how many transfers would be waiting to decommission at once, so the page was one gigantic list. Scroll, wait for it to load. Scroll, wait for it to load. Six times over.</p>
         </div>
 
         <div class="beat">
-          <p>Our client often needed to locate specific transfers and communicate with their clients about decommissioning. RMS did not have a search within the dispositions page. This was a third of our client&rsquo;s job.</p>
+          <p>And there was no search. Clients regularly needed to locate specific transfers to coordinate decommissioning with their own clients, so they leaned on the browser&rsquo;s Ctrl+F &mdash; which only searches content that&rsquo;s already loaded. Find nothing, scroll, load, try again.</p>
         </div>
 
         <div class="beat">
-          <p>But our time was up.</p>
+          <p>By the time all this was clear, our time on the project was up.</p>
         </div>
 
         <div class="beat">
-          <p>I fought for the client to get a search on the page.</p>
+          <p>I fought for the search anyway. It went in as a last-minute addition &mdash; a small build, and the change our clients thanked us for most.</p>
         </div>
 
-        <div class="beat">
-          <p>We added it as a last minute addition</p>
-        </div>
+        <h2 class="story__act">Learning</h2>
 
         <div class="beat">
-          <p>And they were eternally grateful.</p>
+          <p>My instinct on this project was to remove work. The client wanted to stay in command of it &mdash; to see the whole warehouse, keep every move recoverable, and decide for themselves what to ask of the people doing the lifting. The designs that shipped were the ones that respected that: not the cleverest systems on the board, but the ones that handed the client the warehouse instead of a black box.</p>
         </div>
 
       </div>
