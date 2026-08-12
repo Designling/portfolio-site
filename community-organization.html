@@ -12,6 +12,20 @@
   <link rel="stylesheet" href="css/tokens.css?v=10">
   <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="css/project.css?v=16">
+  <style>
+    /* Chapter label marking a story within the larger "Designing for Connection" frame. */
+    .story__chapter {
+      margin-top: var(--space-9);
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+    .story__chapter + .story__act {
+      margin-top: var(--space-3);
+    }
+  </style>
 </head>
 <body>
 
@@ -70,113 +84,109 @@
     <article class="container">
       <div class="story">
 
-        <h2 class="story__act">One feed, everything weighted the same</h2>
+        <h2 class="story__act">Designing for Connection at Lore</h2>
 
         <div class="beat">
-          <p>Open Lore and you&rsquo;d scroll past a sleep-tips post, then a post on finding peace in this political climate, then a video about making friends, then a story about an ice bath &mdash; all equal, in whatever order they&rsquo;d been posted.</p>
+          <p>Lore only makes money when people use healthcare less. Its theory of change: reflection and community change beliefs and identity, which change behavior, which reduces inflammation and healthcare use. Community does that work by creating a space where people can be authentic and have their ideas challenged, helping people actually evaluate their own situation rather than just perform for an audience. Belief doesn&rsquo;t shift by watching &mdash; real catalysts require someone to take an action, not just observe one.</p>
         </div>
 
         <div class="beat">
-          <p>That&rsquo;s fine when the goal is keeping people scrolling. It&rsquo;s the wrong model when the goal is helping someone feel less alone in something specific. Someone struggling with sleep had no way to find the other people talking about sleep.</p>
+          <p>I focused on the community half of the product. When I joined, the goal for it was &ldquo;flourishing community&rdquo; &mdash; closer to a mood than a spec. I replaced it with something I could design against: community happens when people are in proximity to each other because of a shared purpose or characteristic. Every story that follows tests that definition.</p>
+        </div>
+
+        <p class="story__chapter">Story 1: Designing for Discovery &mdash; From Feed to Hubs</p>
+
+        <h2 class="story__act">A community running on fumes</h2>
+
+        <div class="beat">
+          <p>By the time I joined, the Lore community had been trending down for a while &mdash; not a collapse, a steady decline. It was a small community to start, and it had leaned on a company mandate that every employee post weekly. Once that requirement was relaxed, the numbers kept sliding.</p>
+        </div>
+
+        <h2 class="story__act">Autolinking: the tool I inherited</h2>
+
+        <div class="beat">
+          <p>The squad had already invested heavily in autolinking &mdash; an ML process that auto-tagged every post with one to three hashtags, giving it a one-click search into related content. It wasn&rsquo;t built around my proximity definition; it already existed. My job was to figure out where it belonged inside a real vision of community, not the other way around.</p>
+        </div>
+
+        <h2 class="story__act">Real momentum, real limits</h2>
+
+        <div class="beat">
+          <p>I looked closely at what was already working organically: a fasting-and-workout community built on weekly check-in posts, real camaraderie. But it depended entirely on super users manually pulling other members in &mdash; not something a new or quiet user could stumble into.</p>
         </div>
 
         <div class="beat">
-          <p>They could see that people were reflecting, but not where their reflection belonged.</p>
+          <p>Autolinking itself wasn&rsquo;t landing, either. Click-through on hashtags was low, tags were often called inaccurate, and &mdash; since tagging was automatic &mdash; involuntary: people saw their posts labeled with topics they hadn&rsquo;t chosen.</p>
         </div>
 
         <div class="beat">
-          <p>New users felt it hardest: land on a feed of strangers&rsquo; unrelated posts, find nothing that speaks to you, leave.</p>
+          <p><em>(I&rsquo;d asked to talk to customers directly and was turned down, so this leaned on observed behavior rather than direct feedback &mdash; something that changed later once I started running Lyssna tests.)</em></p>
+        </div>
+
+        <h2 class="story__act">Diagnosing it in a workshop</h2>
+
+        <div class="beat">
+          <p>I ran a design workshop with the squad. Two things came out of it: real UI complaints, and &mdash; more fundamentally &mdash; the product needed to feel like it was building communities, not serving scrollable content.</p>
         </div>
 
         <figure class="story-figure">
-          <img src="images/community-organization-old.png?v=2" alt="The original single reverse-chronological feed, annotated: an app-wide widget, some wasted white space, an edit indicator that caused confusion, and an article by Lore.">
-          <figcaption>The original feed &mdash; one reverse-chronological stream, everything weighted equally.</figcaption>
+          <img src="images/community-organization-old-ui-issues.png" alt="The old Lore feed, annotated with UI complaints: inconsistent text cutoffs, wasted white space, an edit indicator that confused people, and posts too small to feel personal.">
+          <figcaption>The old feed through the workshop&rsquo;s eyes &mdash; cutoffs, wasted space, a confusing edit indicator, and posts too small to feel personal.</figcaption>
         </figure>
 
-        <h2 class="story__act">Ranking had already been tried</h2>
+        <h2 class="story__act">Channels vs. hubs: the real fork</h2>
 
         <div class="beat">
-          <p>Before I joined the squad, the team had gone at this with ranking &mdash; and run into a wall. Ranking needs volume and context to work, and Lore had neither yet. They&rsquo;d shelved it and shipped autolinking instead.</p>
-        </div>
-
-        <h2 class="story__act">Autolinking worked &mdash; if you found a post first</h2>
-
-        <div class="beat">
-          <p>Each post got a couple of auto-generated hashtags, tappable through search to reach related posts. A good concept with two problems: the tagging was inconsistent, and it was post-first. You had to stumble onto something that resonated before you could branch out from it. And the tags were specific enough that users often disagreed with them.</p>
+          <p>Channels &mdash; Discord- or Reddit-style &mdash; were a pattern I&rsquo;d seen work elsewhere. Two things ruled them out: building them meant a complete backend overhaul, not feasible on top of the autolinking investment; and channels need someone to create and maintain them &mdash; if that was our team, we&rsquo;d become the bottleneck deciding what communities got to exist.</p>
         </div>
 
         <div class="beat">
-          <p>There was still no answer to the two questions underneath all of this: where do I belong here, and what is this community even about?</p>
-        </div>
-
-        <h2 class="story__act">Hubs: lift the tag off the post</h2>
-
-        <div class="beat">
-          <p>So we stopped treating the tag as a label on a post and started treating it as a place.</p>
-        </div>
-
-        <div class="beat">
-          <p>Hubs abstracted those post-level hashtags up a level &mdash; broad enough to hold a real conversation, and created only once there was enough content to sustain one. Not &ldquo;Finding Strength in Meditation,&rdquo; but <em>Finding Strength</em> and <em>Meditation</em>, each standing on its own. A post could route into more than one.</p>
+          <p>So I suggested hubs: same sorting function as channels, built directly on the autolinking already in place. Once enough posts clustered around a topic, the system auto-generated a new hub, and our data/ML squad could orchestrate which ones surfaced. No backend overhaul, and the system stayed emergent instead of something we had to seed and maintain by hand.</p>
         </div>
 
         <figure class="story-figure">
           <img src="images/organic-hubs.png" alt="Diagram: posts on the left flow along arrows into topic hubs on the right, with some posts routing into more than one hub.">
-          <figcaption>Organic hubs &mdash; auto-tagged posts route into one or more topic hubs.</figcaption>
+          <figcaption>Hubs &mdash; auto-tagged posts cluster into topic hubs the system generates once there&rsquo;s enough content.</figcaption>
         </figure>
-
-        <div class="beat">
-          <p>Autolinking made you find a post to find a place. Hubs made the place the starting point.</p>
-        </div>
-
-        <h2 class="story__act">Discord&rsquo;s model, without Discord&rsquo;s backend</h2>
-
-        <div class="beat">
-          <p>We took the shape from Discord: named places you drop into, each with its own ongoing conversation. What we couldn&rsquo;t take was posting into one. Channel-scoped composition meant rebuilding how posts were created and stored, and that wasn&rsquo;t a fight worth having yet.</p>
-        </div>
-
-        <div class="beat">
-          <p>So hubs stayed read-only lenses. You wrote a post the way you always had, and the backend routed it into whatever hubs fit &mdash; which it was already good enough to do. Users got somewhere to go without us rebuilding the system underneath them.</p>
-        </div>
 
         <h2 class="story__act">Five to start, then personalized</h2>
 
         <div class="beat">
-          <p>Every user got five hubs out of the gate, which shifted with their engagement over time. Five is enough to signal what the community is about without asking anyone to pick from a wall of options.</p>
+          <p>Every user got five hubs out of the gate &mdash; not the full list, which ran 25 to 40 deep. Showing all of them would have meant asking someone to pick from a wall of options before they&rsquo;d even seen what the community was about. Five was enough to signal direction without overwhelming anyone, and it shifted with each user&rsquo;s engagement over time, giving us a level of personalization without needing to build a real recommendation system.</p>
         </div>
+
+        <figure class="story-figure">
+          <img src="images/community-organization-new.png" alt="The redesigned home screen with hub filter tabs (All, #Meditation, #Breathing, #Overwhelm) across the top.">
+          <figcaption>Five hubs to start &mdash; topic filters across the top of the home, shifting with each user&rsquo;s engagement.</figcaption>
+        </figure>
 
         <div class="beat">
           <p>That was the real unlock: direction. Somewhere to go, and a decision to make about where.</p>
         </div>
 
-        <figure class="story-figure">
-          <img src="images/community-organization-new.png" alt="The redesigned home screen with hub filter tabs (All, #Meditation, #Breathing, #Overwhelm), annotated: new hubs, larger content allowed and encouraged, and an updated-post indicator.">
-          <figcaption>The redesigned home &mdash; hub filters across the top, longer posts, update indicator.</figcaption>
-        </figure>
-
-        <h2 class="story__act">Super users adopted it immediately</h2>
+        <h2 class="story__act">What worked</h2>
 
         <div class="beat">
-          <p>They used hub filters to track recurring topics, recognize familiar names, and reply with intention instead of posting into the void. The underlying theory held: given a way to find context, people reciprocated.</p>
-        </div>
-
-        <h2 class="story__act">It missed the people who needed it most</h2>
-
-        <div class="beat">
-          <p>Reading became place-based. Writing didn&rsquo;t. A quiet user could drop into a hub, find the exact conversation they&rsquo;d been looking for &mdash; and then still have to post into the general stream and hope it landed back where they&rsquo;d found it.</p>
+          <p>Super users adopted hubs almost immediately. Posts grouped well enough that a hub visibly read as &ldquo;a genuinely good topic&rdquo; &mdash; setting Lore apart from typical social media groups. Hubs pulled real traffic out of the gate: 15 to 30 unique users a day.</p>
         </div>
 
         <div class="beat">
-          <p>Super users could hold that gap in their heads. New users couldn&rsquo;t. Discovery still rewarded people who were already active and confident &mdash; the same users who didn&rsquo;t need help finding belonging.</p>
+          <p>Scale, for context: Lore had 5,000+ active accounts total, but only ~400 active in the community. The app&rsquo;s core draw was getting paid to reflect with an AI chatbot &mdash; the community was never the growth engine, just where connection and depth happened. Against that base of 400, hubs settled into 25&ndash;40 active topics, with about 10 popular enough to hit that daily traffic &mdash; a real share of a small community, not a rounding error.</p>
+        </div>
+
+        <h2 class="story__act">What didn&rsquo;t</h2>
+
+        <div class="beat">
+          <p>The traffic didn&rsquo;t hold. Unique daily users drifted down to ~5, even for the most popular hubs. This wasn&rsquo;t a visibility problem &mdash; people engaged fine when there was something to engage with. It was supply: the community was producing 4 to 8 posts a week, but ~130 comments a week &mdash; people were happy to reply, just not to originate.</p>
         </div>
 
         <div class="beat">
-          <p>Hubs organized where content goes. They did nothing for who shows up.</p>
+          <p>I&rsquo;d kept an &ldquo;All&rdquo; hub as a catch-all, and it became the default most people lived in. To test whether All itself was the problem, I removed it &mdash; users landed on their last-engaged hub, or the most trending one. The numbers only ticked up slightly. People were sticky to wherever they landed, not to All specifically. It wasn&rsquo;t a findability problem. There just wasn&rsquo;t enough content anywhere to pull people past their one default hub.</p>
         </div>
 
-        <h2 class="story__act">Categorization organizes. It doesn&rsquo;t onboard.</h2>
+        <h2 class="story__act">Learning</h2>
 
         <div class="beat">
-          <p>Hubs gave structure to conversations that already had momentum, but structure can&rsquo;t create someone&rsquo;s first reason to speak. The cold start &mdash; the blank-page moment &mdash; needed a different intervention. That&rsquo;s where the next round of experiments picked up.</p>
+          <p>Categorization can&rsquo;t manufacture content it doesn&rsquo;t have. Hubs worked exactly as designed &mdash; they organized what existed &mdash; but a small, still-declining community wasn&rsquo;t producing enough posts to sustain more than one active space, and people go where they land, not where the structure points them. The real problem wasn&rsquo;t discovery. It was supply: how do you get people to actually create more. That&rsquo;s where the next round of experiments picked up.</p>
         </div>
 
       </div>
