@@ -73,54 +73,74 @@
         <h2 class="story__act">Problem</h2>
 
         <div class="beat">
-          <p>A new client brought us a 65+ population, and we started sending welcome emails to thousands of people who had never heard of us.</p>
+          <p>Customer care started getting calls that didn&rsquo;t fit any script.</p>
         </div>
 
         <div class="beat">
-          <p>Those emails were personalized. Name, plan, the works.</p>
+          <p>Callers were stuck at sign-in &mdash; but they weren&rsquo;t locked out. They didn&rsquo;t have accounts. They were certain they did, and before an agent could help with anything, they had to talk the caller out of a belief about their own history with us. A slow, uncomfortable conversation, every time, before any actual support began.</p>
         </div>
 
         <div class="beat">
-          <p>To this audience, a company that knows your name is a company that already has your file. Users arrived at the front door certain they had an account and clicked Sign in.</p>
+          <p>The calls all traced back to the same place. A new client had brought us a 65+ population, and we&rsquo;d started sending welcome emails to thousands of people who had never heard of us.</p>
+        </div>
+
+        <h2 class="story__act">Chasing the Copy</h2>
+
+        <div class="beat">
+          <p>My first suspect was the marketing materials. Somewhere in there, I figured, we were telling people they had an account.</p>
         </div>
 
         <div class="beat">
-          <p>They didn&rsquo;t have accounts. They hit a wall and called customer care.</p>
+          <p>The emails were personalized. Name, plan, the works. But I read every line &mdash; no &ldquo;your account is ready,&rdquo; no &ldquo;log back in.&rdquo; The copy never claimed an account existed.</p>
         </div>
 
         <div class="beat">
-          <p>These weren&rsquo;t ordinary support calls. Before an agent could help, they had to talk the caller out of a belief about their own history with us &mdash; a slow, uncomfortable conversation that happened before any actual support began.</p>
+          <p>The belief wasn&rsquo;t something we said. It was something the email&rsquo;s existence implied. To this audience, a company that knows your name is a company that already has your file. A personalized message from a company you&rsquo;ve never heard of doesn&rsquo;t read as marketing. It reads as a file someone already has on you.</p>
         </div>
 
-        <div class="beat">
-          <p>We assumed the copy caused it and audited the marketing emails first. Nothing in them claimed an account existed. The belief wasn&rsquo;t something we said. It was something the email&rsquo;s existence implied.</p>
-        </div>
-
-        <h2 class="story__act">The Bet</h2>
+        <h2 class="story__act">Chasing the Hierarchy</h2>
 
         <div class="beat">
-          <p>The screen offered three doors: Sign in, Learn more, Create account.</p>
+          <p>My second suspect was the screen itself.</p>
         </div>
 
         <figure class="story-figure">
-          <img src="images/old-login-screen.png" alt="The old entry screen offering three choices: Sign in, Learn more, and Create account.">
+          <img src="images/simplifying-entry-original.png" alt="The old Lore entry screen, annotated: Sign in has the most hierarchy — a filled primary Sign in button above an outlined Create Account button and a Learn More link.">
           <figcaption>The old screen &mdash; three doors: Sign in, Learn more, Create account.</figcaption>
         </figure>
 
         <div class="beat">
-          <p>That asked every arriving user to correctly classify themselves before entering. But this population classified themselves wrong, confidently &mdash; and no amount of label-tuning fixes a confident wrong answer.</p>
+          <p>The actual choice was Sign in or Create account, and every arriving user had to correctly classify themselves before walking through one.</p>
         </div>
 
         <div class="beat">
-          <p>So we stopped asking.</p>
+          <p>Sign in was the primary button &mdash; and on its own merits, that was backwards. Lore isn&rsquo;t an app you sign into constantly. Once you&rsquo;re in, you stay in; most users get pushed out once or twice a year. The most common person standing at this door wasn&rsquo;t a returning user. It was someone arriving for the first time.</p>
+        </div>
+
+        <div class="beat">
+          <p>So I played with the hierarchy. Demoted Sign in. Promoted Create account.</p>
+        </div>
+
+        <div class="beat">
+          <p>Every version was better than what we had. And every version still asked the same question: which kind of user are you? These callers weren&rsquo;t confused &mdash; they were confident. Confidently wrong. No arrangement of buttons fixes a confident wrong answer, and I couldn&rsquo;t look at any of my mockups and honestly believe the calls would stop.</p>
+        </div>
+
+        <h2 class="story__act">The Reframe</h2>
+
+        <div class="beat">
+          <p>I took the problem to the team, and a developer said: what about identifier-first authentication?</p>
+        </div>
+
+        <div class="beat">
+          <p>If you&rsquo;ve signed into Gmail, you&rsquo;ve walked through it. You type your email &mdash; and that&rsquo;s the whole ask. The system checks whether it knows you. If it does, you get a password screen. If it doesn&rsquo;t, you get account creation. You never answer the question <em>do I have an account?</em> because the system answers it for you.</p>
+        </div>
+
+        <div class="beat">
+          <p>That was the exit. Our users were failing a question we didn&rsquo;t need to ask.</p>
         </div>
 
         <div class="beat">
           <p>One email field. One button: Continue to Lore.</p>
-          <ul>
-            <li>Email on file &rarr; sign-in</li>
-            <li>Email not on file &rarr; account creation</li>
-          </ul>
         </div>
 
         <figure class="story-figure">
@@ -130,10 +150,6 @@
 
         <div class="beat">
           <p>The system already knew which kind of user this was. No reason to make the user guess.</p>
-        </div>
-
-        <div class="beat">
-          <p><em>As a new or returning user, I need to get into Lore without having to make a decision about what I am.</em></p>
         </div>
 
         <h2 class="story__act">What It Cost Us</h2>
@@ -147,13 +163,13 @@
         </div>
 
         <div class="beat">
-          <p><strong>An unfamiliar pattern for established users.</strong> Lore isn&rsquo;t an app people sign into constantly. The screen has to work best for the first time, not the fiftieth. Familiarity was the cheaper thing to trade.</p>
+          <p><strong>An unfamiliar pattern for established users.</strong> Same math as the button hierarchy: nobody signs into Lore often enough to build a habit worth protecting. The screen has to work best for the first time, not the fiftieth. Familiarity was the cheaper thing to trade.</p>
         </div>
 
         <h2 class="story__act">Test</h2>
 
         <div class="beat">
-          <p>A first-click test against the old screen. 30 participants, one day, $60.</p>
+          <p>I ran a first-click test against the old screen. 30 participants, one day, $60.</p>
         </div>
 
         <div class="beat">
@@ -166,7 +182,11 @@
         </figure>
 
         <div class="beat">
-          <p>Even without the email assumption, one participant still clicked Sign in. It wasn&rsquo;t a strong signal &mdash; but it spoke to the issue.</p>
+          <p>One honest limit: the task tells participants they&rsquo;re signing up. It couldn&rsquo;t recreate the false belief that caused the calls &mdash; no one-day test could. This measured clarity, not the belief itself.</p>
+        </div>
+
+        <div class="beat">
+          <p>Even so, one participant on the old screen clicked Sign in with no reason to.</p>
         </div>
 
         <div class="beat">
@@ -181,10 +201,6 @@
 
         <div class="beat">
           <p>Zero customer care calls about this issue across the next several months of new onboardings.</p>
-        </div>
-
-        <div class="beat">
-          <p>The category didn&rsquo;t shrink. It closed.</p>
         </div>
 
       </div>
