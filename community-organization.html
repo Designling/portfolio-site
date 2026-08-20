@@ -25,6 +25,13 @@
     .story__chapter + .story__act {
       margin-top: var(--space-3);
     }
+    /* Framed panel for the inline SVG chart. */
+    .chart-panel {
+      padding: var(--space-6);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
   </style>
 </head>
 <body>
@@ -106,6 +113,25 @@
         <div class="beat">
           <p>By the time I joined, the Lore community had been trending down for a while &mdash; not a collapse, a steady decline. It was a small community to start, and it had leaned on a company mandate that every employee post weekly. Once that requirement was relaxed, the numbers kept sliding.</p>
         </div>
+
+        <figure class="story-figure">
+          <div class="chart-panel">
+            <svg viewBox="0 0 620 340" role="img" aria-label="Line chart: community engagement in a steady decline, marked &quot;Now&quot; about a quarter of the way through, continuing to drop before rising gently near the end." style="width:100%;height:auto;display:block">
+              <!-- baseline -->
+              <line x1="50" y1="290" x2="590" y2="290" style="stroke:var(--color-border)" stroke-width="2"/>
+              <!-- "Now" marker at ~1/4 -->
+              <line x1="185" y1="42" x2="185" y2="290" style="stroke:var(--color-text-muted)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.7"/>
+              <text x="185" y="30" text-anchor="middle" style="fill:var(--color-text-muted)" font-size="16" font-family="Inter, sans-serif">Now</text>
+              <!-- area fill under the curve -->
+              <path d="M 50 90 C 120 122, 158 145, 185 152 C 300 186, 400 248, 455 254 C 500 250, 548 232, 590 216 L 590 290 L 50 290 Z" style="fill:var(--color-accent)" opacity="0.13"/>
+              <!-- engagement curve: steady decline, then a gentle rise -->
+              <path d="M 50 90 C 120 122, 158 145, 185 152 C 300 186, 400 248, 455 254 C 500 250, 548 232, 590 216" fill="none" style="stroke:var(--color-accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- point on the curve at "Now" -->
+              <circle cx="185" cy="152" r="6" style="fill:var(--color-accent)"/>
+            </svg>
+          </div>
+          <figcaption>Community engagement &mdash; a steady decline for a while before it began to turn back up.</figcaption>
+        </figure>
 
         <h2 class="story__act">Autolinking: the tool I inherited</h2>
 
