@@ -12,6 +12,15 @@
   <link rel="stylesheet" href="css/tokens.css?v=10">
   <link rel="stylesheet" href="css/style.css?v=13">
   <link rel="stylesheet" href="css/project.css?v=16">
+  <style>
+    /* Framed panel for the inline SVG chart. */
+    .chart-panel {
+      padding: var(--space-6);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+  </style>
 </head>
 <body>
 
@@ -117,6 +126,25 @@
         <div class="beat">
           <p><strong>What worked.</strong> Participation rose. People hadn&rsquo;t had anything like this before, and because the plant was genuinely theirs, they owned it.</p>
         </div>
+
+        <figure class="story-figure">
+          <div class="chart-panel">
+            <svg viewBox="0 0 620 340" role="img" aria-label="Line chart: community engagement declines, bottoms out, and rises again, with a &quot;Now&quot; marker sitting just past the point where it turns back up." style="width:100%;height:auto;display:block">
+              <!-- baseline -->
+              <line x1="50" y1="290" x2="590" y2="290" style="stroke:var(--color-border)" stroke-width="2"/>
+              <!-- "Now" marker just past the upturn -->
+              <line x1="515" y1="42" x2="515" y2="290" style="stroke:var(--color-text-muted)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.7"/>
+              <text x="515" y="30" text-anchor="middle" style="fill:var(--color-text-muted)" font-size="16" font-family="Inter, sans-serif">Now</text>
+              <!-- area fill under the curve -->
+              <path d="M 50 90 C 120 122, 158 145, 185 152 C 300 186, 400 248, 455 254 C 505 253, 548 245, 590 237 L 590 290 L 50 290 Z" style="fill:var(--color-accent)" opacity="0.13"/>
+              <!-- engagement curve: long decline, then a gentle rise -->
+              <path d="M 50 90 C 120 122, 158 145, 185 152 C 300 186, 400 248, 455 254 C 505 253, 548 245, 590 237" fill="none" style="stroke:var(--color-accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- point on the curve at "Now" -->
+              <circle cx="515" cy="248" r="6" style="fill:var(--color-accent)"/>
+            </svg>
+          </div>
+          <figcaption>Community engagement &mdash; climbing again now that people had something that was theirs.</figcaption>
+        </figure>
 
         <div class="beat">
           <p><strong>What didn&rsquo;t.</strong> Ownership worked almost too well. Some users started posting for the plant &mdash; to make it grow &mdash; rather than because they had something they actually wanted to reflect on. The plant had successfully become a reason to participate, but for some people it had quietly replaced the original reason to participate.</p>
