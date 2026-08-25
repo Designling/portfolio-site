@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modeling Norms — Aaron Ebeling</title>
+  <meta name="description" content="Modeling Norms — replacing an onboarding lock with group reflection to teach community behavior through practice instead of policy.">
+  <link rel="icon" href="images/shared/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/project.css?v=16">
+</head>
+<body>
+
+  <span id="top"></span>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/shared/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+        <a href="about.html" class="nav__link">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link is-active" aria-current="page">Portfolio</a>
+      <a href="about.html" class="nav__link">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="project-hero">
+      <a class="project-back" href="index.html">&larr; Back to portfolio</a>
+      <h1>Modeling Norms</h1>
+      <div class="project-overview">
+        <p class="project-overview__summary">Teaching community behavior through practice instead of policy.</p>
+        <div class="project-meta">
+          <div class="project-meta__item">
+            <span class="project-meta__label">Role</span>
+            <span class="project-meta__value">Operational UX Designer, Lore</span>
+          </div>
+          <div class="project-meta__item">
+            <span class="project-meta__label">Timeline</span>
+            <span class="project-meta__value">3 months</span>
+          </div>
+          <div class="project-meta__item">
+            <span class="project-meta__label">Tools</span>
+            <span class="project-meta__value">Figma, Data Reports</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <h2 class="story__act">The setup</h2>
+
+        <div class="beat">
+          <p>By the time I got to this problem, Lore&rsquo;s community had already been through a lot. Auto-linking was in place when I joined. We ran a UI redesign. We shipped the plant &mdash; the ownership mechanic that gave people a reason to show up and tend something.</p>
+        </div>
+
+        <div class="beat">
+          <p>Then leadership and sales added a lock. New users couldn&rsquo;t open the community until two weeks had passed or until they&rsquo;d completed two explorations, which usually took about a week. It did two jobs: it let us close the community off entirely for clients who didn&rsquo;t want one, and it gave everyone else a chance to understand what Lore was doing before they started influencing it.</p>
+        </div>
+
+        <div class="beat">
+          <p>That second job mattered because content quality was the product. Depth and anonymity were what set the Lore community apart from anywhere else you could post. &ldquo;Today is a good day&rdquo; was a failure state &mdash; not because it&rsquo;s a bad thing to say, but because you can say it anywhere. Every post either held the bar or lowered it, and a community that drifts becomes a community you moderate forever.</p>
+        </div>
+
+        <div class="beat">
+          <p>So the lock protected the norms. The problem was that a lock is a delay, not a lesson. Users came out of it having spent two weeks reflecting with a bot. They hadn&rsquo;t learned anything about what it looked like to participate.</p>
+        </div>
+
+        <h2 class="story__act">What we&rsquo;d already tried</h2>
+
+        <div class="beat">
+          <ul>
+            <li><strong>Hubs helped.</strong> Organizing around topics that skewed toward health and mental health gave people a subject worth being thoughtful about. It moved things. It wasn&rsquo;t enough.</li>
+            <li><strong>We wrote instructions.</strong> Straightforward, visible guidance on how to engage. The needle didn&rsquo;t move.</li>
+            <li><strong>Lore Posts existed.</strong> Collections of small user posts aggregated into an article, generated automatically once there was enough content. Enormous visual hierarchy, low click-ins, and nothing to do with them once you got there. You read one and left.</li>
+          </ul>
+        </div>
+
+        <div class="beat">
+          <p>The plant had its own version of this. It worked &mdash; people showed up &mdash; but it introduced problems alongside the wins. Motivation without a subject produces exactly the low-value posting we were trying to avoid. Someone who wants to tend their plant and has nothing in particular to say will post something to get credit for posting. We wanted to curb that without giving up the plant.</p>
+        </div>
+
+        <div class="beat">
+          <p>Looking at all of it together, the diagnosis got clear. Everything we&rsquo;d built was expository. We were describing the norms. Norms aren&rsquo;t learned that way. They&rsquo;re learned by watching someone else do it and then trying it yourself.</p>
+        </div>
+
+        <h2 class="story__act">What I proposed</h2>
+
+        <div class="beat">
+          <p>This one didn&rsquo;t come out of a workshop. It came out of reading our company objectives and working out what the community side of them actually required, then building buy-in for it.</p>
+        </div>
+
+        <div class="beat">
+          <p>The proposal: replace the lock with a rehearsal. Instead of gating the community on elapsed time or the bot mechanic, new users would engage with three daily reflections before the broader community opened to them. Group reflection as the price of entry &mdash; not a wait, a practice.</p>
+        </div>
+
+        <div class="beat">
+          <p>The case rested on three things:</p>
+          <ol>
+            <li><strong>Identity shift.</strong> The two weeks before the community opened were spent with a bot that never offers an opinion &mdash; it only asks you more questions. That&rsquo;s the right posture for reflection, but it&rsquo;s the opposite of what the community needed from people. In the community we wanted opinions and advice, given to another person. Nothing in onboarding asked anyone to do that even once. Three reflections would.</li>
+            <li><strong>Modeled behavior, three times, on topics we chose.</strong> Each reflection was a chance to watch established members answer a prompt well. That&rsquo;s norm-setting you never have to write down.</li>
+            <li><strong>Controlled mixing.</strong> The lock separated new users from everyone else, which was the point of it &mdash; but it meant new arrivals never encountered the people who were actually good at this. A shared daily prompt gave the most active users and the newest ones a common ground, on a subject we&rsquo;d picked, at a scale we could watch.</li>
+          </ol>
+        </div>
+
+        <h2 class="story__act">It was turned down</h2>
+
+        <div class="beat">
+          <p>Not on the merits. Isolating a single hub inside the lock would have taken work, but it was clearly doable, and that never became the real objection.</p>
+        </div>
+
+        <div class="beat">
+          <p>The decision came from above: users were to focus on Lore bot. The bot was less risky, more predictable, and it was the surface where we could reward people. Community behavior is harder to instrument and harder to incentivize. Given a choice between the two, leadership picked the one they could control.</p>
+        </div>
+
+        <div class="beat">
+          <p>I had buy-in from my team. It wasn&rsquo;t enough, and it didn&rsquo;t ship as onboarding.</p>
+        </div>
+
+        <h2 class="story__act">Where it actually landed</h2>
+
+        <div class="beat">
+          <p>The idea had enough merit that it moved instead of dying. Daily reflections shipped inside the community rather than in front of it.</p>
+        </div>
+
+        <div class="beat">
+          <p>That turned out to be the fix for the plant&rsquo;s side effects. The plant supplied the reason to post; the reflection supplied the substance. Someone who wanted to tend their plant now had a touchstone &mdash; a prompt worth answering, a way to earn progress honestly, and a post that reinforced the norms instead of diluting them.</p>
+        </div>
+
+        <div class="beat">
+          <p>It became the most visited hub. It drew a healthy comment volume, and &mdash; the part I actually cared about &mdash; those comments were almost all on target, focused on the things Lore wanted people thinking about. My read is that we also saw fewer of the empty plant-maintenance posts after it launched, though I don&rsquo;t have clean numbers to separate that from everything else changing at the same time.</p>
+        </div>
+
+        <h2 class="story__act">Tuning it</h2>
+
+        <div class="beat">
+          <p>Shipping it was the easy part. I gave it a month and then went through the reflections one at a time, sorting which ones took off and which ones died on arrival. Not all of our daily reflections were good, and the failures weren&rsquo;t random &mdash; some questions invited a real answer and some only invited agreement.</p>
+        </div>
+
+        <div class="beat">
+          <p>The bigger surprise was supply. We burned through the question store far faster than I&rsquo;d projected. Even reflections that didn&rsquo;t generate discussion still got visited, so people were seeing every question whether or not they answered it, and a repeat felt like a repeat. I worked with our ML team on generating more, and we kept a human in the loop to vet each one before it went out &mdash; the volume problem was solvable, but not at the cost of letting an off-tone question through.</p>
+        </div>
+
+        <div class="beat">
+          <p>The other problem was depth. Early on, a reflection would collect a stack of parallel monologues and then stop; a good conversation had one day to happen and no way to continue. We tried a few scheduling approaches and settled on resurfacing: a reflection that drew three or more comments on its first day got another shot in the feed, so the threads that were actually going somewhere had room to keep going.</p>
+        </div>
+
+        <h2 class="story__act">What I take from this</h2>
+
+        <div class="beat">
+          <p><strong>Norms are a curriculum, not a policy.</strong> We spent real effort writing down how to behave and got nothing for it. What worked was giving people a structured chance to do the thing, next to people already doing it well.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>A gate is not an education.</strong> The lock protected the community by keeping people out of it. That&rsquo;s defensible for two weeks. It doesn&rsquo;t teach anyone anything, and we were treating it as if it did.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>Separate the mechanic from its placement.</strong> I lost the argument about where this belonged and still got the mechanic built. If I&rsquo;d held out for the onboarding framing, the whole thing would have died with the rejection.</p>
+        </div>
+
+        <div class="beat">
+          <p><strong>What I&rsquo;d still want to know.</strong> My original argument was that the highest-leverage moment is before someone&rsquo;s first post, and I never got to test it. Whether the onboarding version would have outperformed what shipped is an open question &mdash; I think it would have, and I can&rsquo;t prove it.</p>
+        </div>
+
+      </div>
+    </article>
+
+    <section class="container project-next">
+      <h2 class="project-next__heading">Up next</h2>
+      <div class="grid grid--cards">
+
+        <a class="card" href="community-ownership.html">
+          <div class="card__media">
+            <img src="images/community-ownership/community-ownership-thumnail.png" alt="Illustration of a leafy potted plant with small purple flowers in a terracotta pot.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Community Ownership</h3>
+            <p class="card__desc">Designed for user ownership to drive a sustained lift in how people posted, read, and commented.</p>
+          </div>
+        </a>
+
+        <a class="card" href="community-organization.html">
+          <div class="card__media">
+            <img src="images/community-organization/community-organization-thumbnail.png" alt="A cluster of green, teal, and blue dots grouped together.">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Community Organization</h3>
+            <p class="card__desc">Restructured the community experience to make interactions more intentional &mdash; less endless scroll, more time spent where it mattered.</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="project-next__top">
+        <a href="#top" class="btn btn--secondary">Back to top &uarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/aaron-ebeling/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/figures.js"></script>
+  <script data-goatcounter="https://aaronebeling.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
