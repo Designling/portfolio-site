@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bowties — Aaron Ebeling</title>
+  <meta name="description" content="Bowties — I followed a pattern to make my first one, then wore a bow tie for 114 days straight.">
+  <link rel="icon" href="images/shared/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/project.css?v=16">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/shared/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Portfolio</a>
+        <a href="about.html" class="nav__link is-active" aria-current="page">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link">Portfolio</a>
+      <a href="about.html" class="nav__link is-active" aria-current="page">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <a class="project-back" href="about.html">&larr; Back to about</a>
+      <p class="eyebrow">Craft</p>
+      <h1>Bowties</h1>
+      <p class="lead">One day I figured I could just make a bow tie. I followed a pattern, and ended up wearing one for 114 days straight &mdash; it&rsquo;s the perfect mesh between formal and informal.</p>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <figure class="story-figure">
+          <img src="images/about/craft-bowties/craft-bowties-3.png" alt="A finished red bow tie printed with white snowflakes, tied and photographed against a plain background.">
+        </figure>
+
+        <figure class="story-figure">
+          <img src="images/about/craft-bowties/craft-bowties-1.png" alt="A finished rust-colored bow tie with a dark paisley and floral pattern.">
+          <img src="images/about/craft-bowties/craft-bowties-2.png" alt="A finished dark green bow tie with a holly and berry pattern.">
+          <figcaption>A few of the ties in the rotation.</figcaption>
+        </figure>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/aaron-ebeling/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script data-goatcounter="https://aaronebeling.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

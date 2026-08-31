@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Family Sign — Aaron Ebeling</title>
+  <meta name="description" content="Temple Family Sign — made for our 5th anniversary, designed in Figma from a reference photo and cut on a Glowforge.">
+  <link rel="icon" href="images/shared/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/project.css?v=16">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="nav__brand">
+        <img src="images/shared/aaron-logo.svg" alt="" class="nav__logo">
+        Aaron Ebeling
+      </a>
+
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Portfolio</a>
+        <a href="about.html" class="nav__link is-active" aria-current="page">About Me</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-icon"></span>
+      </button>
+    </nav>
+
+    <div class="nav__mobile-panel container" id="mobile-menu">
+      <a href="index.html" class="nav__link">Portfolio</a>
+      <a href="about.html" class="nav__link is-active" aria-current="page">About Me</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <a class="project-back" href="about.html">&larr; Back to about</a>
+      <p class="eyebrow">Craft</p>
+      <h1>Temple Family Sign</h1>
+      <p class="lead">I wanted to make this for our 5th anniversary. I&rsquo;d seen one like it at a friend&rsquo;s house and figured I could make my own.</p>
+    </section>
+
+    <article class="container">
+      <div class="story">
+
+        <figure class="story-figure">
+          <img src="images/about/craft-temple-sign/craft-temple-sign-finished.jpg" alt="A finished round wood sign hanging on a wall: a white temple silhouette with spires on a dark stained circle, with 'The Ebelings' cut in script below it.">
+        </figure>
+
+        <div class="beat">
+          <p>I started with a photo of the temple, then pulled the elements and general structure off of it in Figma &mdash; breaking the building down into the pieces I&rsquo;d actually need to cut.</p>
+        </div>
+
+        <figure class="story-figure">
+          <img src="images/about/craft-temple-sign/craft-temple-sign-design.png" alt="A line-art design of the temple broken into shaded layers, showing each piece that would be cut separately.">
+          <figcaption>Pulling the structure off the reference photo, piece by piece, in Figma.</figcaption>
+        </figure>
+
+        <div class="beat">
+          <p>Once the design was put together, it was ready for the Glowforge &mdash; but it still took some tweaking. I ran a test cut on cardboard first to check the proportions before committing to the real wood.</p>
+        </div>
+
+        <figure class="story-figure">
+          <img src="images/about/craft-temple-sign/craft-temple-sign-mockup.jpg" alt="A design mockup of the temple silhouette and 'The Ebelings' lettering on a dark circle background, ready to send to the Glowforge.">
+          <figcaption>The finished design, ready to send to the Glowforge.</figcaption>
+        </figure>
+
+        <figure class="story-figure">
+          <img src="images/about/craft-temple-sign/craft-temple-sign-prototype.png" alt="A cardboard test cut of the same temple design and 'The Ebelings' lettering, checking the layout before cutting wood.">
+          <figcaption>A cardboard test cut, checking the design before cutting wood.</figcaption>
+        </figure>
+
+        <div class="beat">
+          <p>After a few tweaks, I cut the final pieces, painted them, and mounted everything onto a stained wood circle.</p>
+        </div>
+
+        <figure class="story-figure">
+          <img src="images/about/craft-temple-sign/craft-temple-sign-painted.png" alt="The cut-out temple piece freshly painted white, propped up outside to dry against a cardboard box." />
+          <figcaption>Painted and drying, before staining the base and mounting it.</figcaption>
+        </figure>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Aaron. Built with Claude Code.</p>
+      <div class="site-footer__links">
+        <a href="mailto:aebeling5@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/aaron-ebeling/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script data-goatcounter="https://aaronebeling.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
